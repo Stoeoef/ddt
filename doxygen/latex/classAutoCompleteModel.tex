@@ -1,0 +1,80 @@
+\hypertarget{classAutoCompleteModel}{\section{Auto\-Complete\-Model Class Reference}
+\label{classAutoCompleteModel}\index{Auto\-Complete\-Model@{Auto\-Complete\-Model}}
+}
+
+
+Offers autocompletion accessible from Q\-M\-L.  
+
+
+
+
+{\ttfamily \#include $<$autocompletemodel.\-h$>$}
+
+Inheritance diagram for Auto\-Complete\-Model\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAutoCompleteModel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAutoCompleteModel_ae7c8421f60a6602bf43e11199c69a130}{Auto\-Complete\-Model} (Q\-String\-List $\ast$list=0, Q\-Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \hyperlink{classAutoCompleteModel}{Auto\-Complete\-Model}} with a given list of completions. \end{DoxyCompactList}\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E Q\-String\-List \hyperlink{classAutoCompleteModel_a4f7f2ee3af6dd85e26158a280d933a86}{completions} (Q\-String prefix)
+\begin{DoxyCompactList}\small\item\em Returns a list of possible completions for a given search term. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Offers autocompletion accessible from Q\-M\-L. 
+
+Offers simple auto completion functions similar to Q\-Completer that can be accessed from Q\-M\-L. The pool of possible completions is stored a Q\-String\-List . 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAutoCompleteModel_ae7c8421f60a6602bf43e11199c69a130}{\index{Auto\-Complete\-Model@{Auto\-Complete\-Model}!Auto\-Complete\-Model@{Auto\-Complete\-Model}}
+\index{Auto\-Complete\-Model@{Auto\-Complete\-Model}!AutoCompleteModel@{Auto\-Complete\-Model}}
+\subsubsection[{Auto\-Complete\-Model}]{\setlength{\rightskip}{0pt plus 5cm}Auto\-Complete\-Model\-::\-Auto\-Complete\-Model (
+\begin{DoxyParamCaption}
+\item[{Q\-String\-List $\ast$}]{list = {\ttfamily 0}, }
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classAutoCompleteModel_ae7c8421f60a6602bf43e11199c69a130}
+
+
+Creates a new {\ttfamily \hyperlink{classAutoCompleteModel}{Auto\-Complete\-Model}} with a given list of completions. 
+
+Change {\ttfamily list} afterwards to use a different set of autocompletions. 
+\begin{DoxyParams}{Parameters}
+{\em list} & a list of possible completions \\
+\hline
+{\em parent} & the object's parent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAutoCompleteModel_a4f7f2ee3af6dd85e26158a280d933a86}{\index{Auto\-Complete\-Model@{Auto\-Complete\-Model}!completions@{completions}}
+\index{completions@{completions}!AutoCompleteModel@{Auto\-Complete\-Model}}
+\subsubsection[{completions}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Auto\-Complete\-Model\-::completions (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{prefix}
+\end{DoxyParamCaption}
+)}}\label{classAutoCompleteModel_a4f7f2ee3af6dd85e26158a280d933a86}
+
+
+Returns a list of possible completions for a given search term. 
+
+The search is not case sensitive. The list of search terms is defined by \hyperlink{classAutoCompleteModel_ae7c8421f60a6602bf43e11199c69a130}{Auto\-Complete\-Model\-::\-Auto\-Complete\-Model} 
+\begin{DoxyParams}{Parameters}
+{\em prefix} & a prefix that will be completed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list with possible completions beginning with {\ttfamily prefix} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/src/autocompletemodel.\-h\item 
+/home/stoef/qt/projects/ddt/ddt/src/autocompletemodel.\-cpp\end{DoxyCompactItemize}

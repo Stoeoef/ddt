@@ -1,0 +1,304 @@
+\hypertarget{classMainModel}{\section{Main\-Model Class Reference}
+\label{classMainModel}\index{Main\-Model@{Main\-Model}}
+}
+
+
+Offers access to all parts of the application's model.  
+
+
+
+
+{\ttfamily \#include $<$mainmodel.\-h$>$}
+
+Inheritance diagram for Main\-Model\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMainModel}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classMainModel_ab0047ea86efa2a40e9aff734f897c330}{Solution\-State} \{ \hyperlink{classMainModel_ab0047ea86efa2a40e9aff734f897c330ab53939240c4a4cba4af14afbd0a88acc}{U\-N\-K\-N\-O\-W\-N}, 
+\hyperlink{classMainModel_ab0047ea86efa2a40e9aff734f897c330a380fb36b63f0bc9518789a36c785b027}{S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S}, 
+\hyperlink{classMainModel_ab0047ea86efa2a40e9aff734f897c330a10b96c9ee5c7b402033d5397b00be38d}{N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S}, 
+\hyperlink{classMainModel_ab0047ea86efa2a40e9aff734f897c330a7bc326ea163e937856ec2e520548e7f8}{C\-A\-L\-C\-U\-L\-A\-T\-I\-N\-G}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the application's solution state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMainModel_a64cbb6676acd654918493189d3667ac8}{void {\bfseries solution\-Count\-Changed} ()}\label{classMainModel_a64cbb6676acd654918493189d3667ac8}
+
+\item 
+\hypertarget{classMainModel_a81d839de094a197583453b9c567eb8df}{void {\bfseries solution\-State\-Changed} ()}\label{classMainModel_a81d839de094a197583453b9c567eb8df}
+
+\item 
+\hypertarget{classMainModel_a77e0d8e44310724ffd717e6e5eb91b68}{void {\bfseries num\-Places\-Changed} ()}\label{classMainModel_a77e0d8e44310724ffd717e6e5eb91b68}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMainModel_a6c11a3942ed91eda77c4901d3d4f95b5}{Main\-Model} (Q\-String config\-File=\char`\"{}options.\-xml\char`\"{}, Q\-Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructs a new {\ttfamily \hyperlink{classMainModel}{Main\-Model}}. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_af573c08c12cc35fb7a961b98a559d21b}{\hyperlink{classMainModel_af573c08c12cc35fb7a961b98a559d21b}{$\sim$\-Main\-Model} ()}\label{classMainModel_af573c08c12cc35fb7a961b98a559d21b}
+
+\begin{DoxyCompactList}\small\item\em Deletes the main model and releases all ressources. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a07df104ce3e2f27de3f5f4a1abe554eb}{\hyperlink{classQListQmlWrapper}{Q\-List\-Qml\-Wrapper} $\ast$ {\bfseries debates} ()}\label{classMainModel_a07df104ce3e2f27de3f5f4a1abe554eb}
+
+\item 
+\hypertarget{classMainModel_a0ee2c2d98c9384a91e3a0eda721eb9c3}{\hyperlink{classQListQmlWrapper}{Q\-List\-Qml\-Wrapper} $\ast$ {\bfseries speaker\-List} ()}\label{classMainModel_a0ee2c2d98c9384a91e3a0eda721eb9c3}
+
+\item 
+\hypertarget{classMainModel_a27a5d15b68e83bb899e6208cc8dd1a18}{\hyperlink{classQListQmlWrapper}{Q\-List\-Qml\-Wrapper} $\ast$ {\bfseries teams} ()}\label{classMainModel_a27a5d15b68e83bb899e6208cc8dd1a18}
+
+\item 
+\hypertarget{classMainModel_a70a4770c8bae2da24bf447203da8f8c3}{\hyperlink{classAutoCompleteModel}{Auto\-Complete\-Model} $\ast$ {\bfseries auto\-Complete\-Model} ()}\label{classMainModel_a70a4770c8bae2da24bf447203da8f8c3}
+
+\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_adf2889da5df77b5fc400d342b3f5ed41}{add\-Speaker} ()
+\begin{DoxyCompactList}\small\item\em Same as. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a3383a2c9e268f9b2d0f132c1113d4ecd}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a3383a2c9e268f9b2d0f132c1113d4ecd}{add\-Speaker} (Q\-String name)}\label{classMainModel_a3383a2c9e268f9b2d0f132c1113d4ecd}
+
+\begin{DoxyCompactList}\small\item\em Creates a new speaker with a given name and adds him to the speaker list. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_ad40184a652b1747e54fe292596988406}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_ad40184a652b1747e54fe292596988406}{remove\-Speaker} (int index)}\label{classMainModel_ad40184a652b1747e54fe292596988406}
+
+\begin{DoxyCompactList}\small\item\em Removes a speaker at a given position in the speaker list. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_aacae118923c35695011e123fd23fa953}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_aacae118923c35695011e123fd23fa953}{remove\-Speaker} (\hyperlink{classSpeakerModel}{Speaker\-Model} $\ast$speaker)}\label{classMainModel_aacae118923c35695011e123fd23fa953}
+
+\begin{DoxyCompactList}\small\item\em Removes a given speaker. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a07cfd68a24326492b77f4e894c271ec1}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a07cfd68a24326492b77f4e894c271ec1}{add\-Op\-Debate} ()}\label{classMainModel_a07cfd68a24326492b77f4e894c271ec1}
+
+\begin{DoxyCompactList}\small\item\em Adds a new O\-P-\/\-Debate to the application's debate list. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a7ecaa63c19d9a441ec3256dfc3ded2de}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a7ecaa63c19d9a441ec3256dfc3ded2de}{add\-Bps\-Debate} ()}\label{classMainModel_a7ecaa63c19d9a441ec3256dfc3ded2de}
+
+\begin{DoxyCompactList}\small\item\em Adds a new B\-P\-S-\/\-Debate to the application's debate list. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_ab7aee65aefd3d6bf4f19c4e306ed7efd}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_ab7aee65aefd3d6bf4f19c4e306ed7efd}{remove\-Debate} (int index)}\label{classMainModel_ab7aee65aefd3d6bf4f19c4e306ed7efd}
+
+\begin{DoxyCompactList}\small\item\em Removes a debate from the debate list with a given index.;. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a70fb02eed9d86a4cff9556bcb147568d}{int {\bfseries num\-Places} ()}\label{classMainModel_a70fb02eed9d86a4cff9556bcb147568d}
+
+\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E \hyperlink{classTeam}{Team} $\ast$ \hyperlink{classMainModel_a147b472af630f6b175f2d511588a71eb}{add\-Team} ()
+\begin{DoxyCompactList}\small\item\em Adds a new, empty team to the application's team list. \end{DoxyCompactList}\item 
+\hyperlink{classTeam}{Team} $\ast$ \hyperlink{classMainModel_af63b7f3d86b50f920510c420c209618f}{add\-Team} (Q\-String name)
+\begin{DoxyCompactList}\small\item\em add\-Team Adds a new, empty team with a given name to the team list. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_adec9c86c3143f1e7427903d56e908d3a}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_adec9c86c3143f1e7427903d56e908d3a}{remove\-Team} (\hyperlink{classTeam}{Team} $\ast$team)}\label{classMainModel_adec9c86c3143f1e7427903d56e908d3a}
+
+\begin{DoxyCompactList}\small\item\em Removes a given team from the applications team list. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a142a9bdd80ac2a6b445e421f1c05ab1d}{int {\bfseries solution\-Count} ()}\label{classMainModel_a142a9bdd80ac2a6b445e421f1c05ab1d}
+
+\item 
+\hypertarget{classMainModel_a1203688ef4dcee03a32e107f1c644617}{\hyperlink{classMainModel_ab0047ea86efa2a40e9aff734f897c330}{Solution\-State} {\bfseries solution\-State} ()}\label{classMainModel_a1203688ef4dcee03a32e107f1c644617}
+
+\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E Q\-String\-List \hyperlink{classMainModel_a34dbbb7962b6e0adb074b66a5b2f8056}{errors} ()
+\begin{DoxyCompactList}\small\item\em Returns a list of error descriptions. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a99c4429479554c669311b860da91b2b8}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a99c4429479554c669311b860da91b2b8}{init\-Solver} ()}\label{classMainModel_a99c4429479554c669311b860da91b2b8}
+
+\begin{DoxyCompactList}\small\item\em Prepares a calculation. The methods takes the current speaker, debate and team list and creates an passes them to an internal solver to prepare further solution calculations. After calling this method solutions can be generated with \hyperlink{classMainModel_a0fca04016af7c3ff89f3d15693acc9a5}{generate\-New\-Solution()};. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a4b5886a2494b6f9c7ccdbb34ef37f1ae}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a4b5886a2494b6f9c7ccdbb34ef37f1ae}{clear\-Solutions} ()}\label{classMainModel_a4b5886a2494b6f9c7ccdbb34ef37f1ae}
+
+\begin{DoxyCompactList}\small\item\em Resets the applications solution state Deletes all calculated solutions and frees the internal solver setup. The solution\-State is set to U\-N\-K\-N\-O\-W\-N afterwards. \par
+Remember to call \hyperlink{classMainModel_a99c4429479554c669311b860da91b2b8}{init\-Solver()}; before attempting to generate new solutions. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_ac646fc37b0f65e6a8500477db7a2f7e6}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E \hyperlink{classSeatToSpeakerMapper}{Seat\-To\-Speaker\-Mapper} $\ast$ \hyperlink{classMainModel_ac646fc37b0f65e6a8500477db7a2f7e6}{get\-Solution} (int index)}\label{classMainModel_ac646fc37b0f65e6a8500477db7a2f7e6}
+
+\begin{DoxyCompactList}\small\item\em Returns a stored solution with a given index. \end{DoxyCompactList}\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a0fca04016af7c3ff89f3d15693acc9a5}{generate\-New\-Solution} ()
+\begin{DoxyCompactList}\small\item\em Generates a new solution and stores it internally. \end{DoxyCompactList}\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a1a00e342ab4f1c27429ca894aa7ed8d4}{interrupt\-Calculation} ()
+\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a0d65d53d33d977e4f5522327abddf232}{update\-Names} ()
+\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a91c905241023334ee91b97b69a14e87c}{write\-Configuration} ()
+\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classMainModel_a7711f1bb52f6427936653cccbcbbacf6}{set\-Language} (Q\-String lang)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMainModel_af743b97d42a665f38d8749bc7e1ee5ae}{\hyperlink{classQListQmlWrapper}{Q\-List\-Qml\-Wrapper} \hyperlink{classMainModel_af743b97d42a665f38d8749bc7e1ee5ae}{speaker\-List}}\label{classMainModel_af743b97d42a665f38d8749bc7e1ee5ae}
+
+\begin{DoxyCompactList}\small\item\em List of the application's speakers. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_ab61e1b1925f4dc1ae94cdcafc579e3fe}{\hyperlink{classQListQmlWrapper}{Q\-List\-Qml\-Wrapper} \hyperlink{classMainModel_ab61e1b1925f4dc1ae94cdcafc579e3fe}{debates}}\label{classMainModel_ab61e1b1925f4dc1ae94cdcafc579e3fe}
+
+\begin{DoxyCompactList}\small\item\em List of the application's debates. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a7a0f8bad4ddc9a082d3ce3cc3e5612d9}{\hyperlink{classQListQmlWrapper}{Q\-List\-Qml\-Wrapper} \hyperlink{classMainModel_a7a0f8bad4ddc9a082d3ce3cc3e5612d9}{teams}}\label{classMainModel_a7a0f8bad4ddc9a082d3ce3cc3e5612d9}
+
+\begin{DoxyCompactList}\small\item\em List of the application's teams. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_ab356492b5fc27678a76529d6fa572fac}{\hyperlink{classAutoCompleteModel}{Auto\-Complete\-Model} \hyperlink{classMainModel_ab356492b5fc27678a76529d6fa572fac}{auto\-Complete\-Model}}\label{classMainModel_ab356492b5fc27678a76529d6fa572fac}
+
+\begin{DoxyCompactList}\small\item\em A completion model for name autocompletion. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a247bfaf9d5b5083ab21a81be2f80c2f2}{\hyperlink{classMainModel_ab0047ea86efa2a40e9aff734f897c330}{Solution\-State} \hyperlink{classMainModel_a247bfaf9d5b5083ab21a81be2f80c2f2}{solution\-State}}\label{classMainModel_a247bfaf9d5b5083ab21a81be2f80c2f2}
+
+\begin{DoxyCompactList}\small\item\em The application's solution state. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_a8c4d8dc4d4aaea3046ab809fc5deffde}{int \hyperlink{classMainModel_a8c4d8dc4d4aaea3046ab809fc5deffde}{solution\-Count}}\label{classMainModel_a8c4d8dc4d4aaea3046ab809fc5deffde}
+
+\begin{DoxyCompactList}\small\item\em Holds the number of calculated and stored solutions. \end{DoxyCompactList}\item 
+\hypertarget{classMainModel_ac2724b25facf4662bb205425d8f5998e}{int \hyperlink{classMainModel_ac2724b25facf4662bb205425d8f5998e}{num\-Places}}\label{classMainModel_ac2724b25facf4662bb205425d8f5998e}
+
+\begin{DoxyCompactList}\small\item\em Holds the complete number of seats in all debate's. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Offers access to all parts of the application's model. 
+
+The {\ttfamily \hyperlink{classMainModel}{Main\-Model}} models the application's state. It stores the current speakers, debates and solution. Furthermore, it allows various operations on the model elements. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classMainModel_ab0047ea86efa2a40e9aff734f897c330}{\index{Main\-Model@{Main\-Model}!Solution\-State@{Solution\-State}}
+\index{Solution\-State@{Solution\-State}!MainModel@{Main\-Model}}
+\subsubsection[{Solution\-State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Main\-Model\-::\-Solution\-State}}}\label{classMainModel_ab0047ea86efa2a40e9aff734f897c330}
+
+
+Specifies the application's solution state. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\-N\-K\-N\-O\-W\-N@{U\-N\-K\-N\-O\-W\-N}!Main\-Model@{Main\-Model}}\index{Main\-Model@{Main\-Model}!U\-N\-K\-N\-O\-W\-N@{U\-N\-K\-N\-O\-W\-N}}\item[{\em 
+\hypertarget{classMainModel_ab0047ea86efa2a40e9aff734f897c330ab53939240c4a4cba4af14afbd0a88acc}{U\-N\-K\-N\-O\-W\-N}\label{classMainModel_ab0047ea86efa2a40e9aff734f897c330ab53939240c4a4cba4af14afbd0a88acc}
+}]It is unknown whether one, none or more solutions exist \index{S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S@{S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S}!Main\-Model@{Main\-Model}}\index{Main\-Model@{Main\-Model}!S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S@{S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S}}\item[{\em 
+\hypertarget{classMainModel_ab0047ea86efa2a40e9aff734f897c330a380fb36b63f0bc9518789a36c785b027}{S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S}\label{classMainModel_ab0047ea86efa2a40e9aff734f897c330a380fb36b63f0bc9518789a36c785b027}
+}]At least one solution exists \index{N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S@{N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S}!Main\-Model@{Main\-Model}}\index{Main\-Model@{Main\-Model}!N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S@{N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S}}\item[{\em 
+\hypertarget{classMainModel_ab0047ea86efa2a40e9aff734f897c330a10b96c9ee5c7b402033d5397b00be38d}{N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S}\label{classMainModel_ab0047ea86efa2a40e9aff734f897c330a10b96c9ee5c7b402033d5397b00be38d}
+}]No solution exists \index{C\-A\-L\-C\-U\-L\-A\-T\-I\-N\-G@{C\-A\-L\-C\-U\-L\-A\-T\-I\-N\-G}!Main\-Model@{Main\-Model}}\index{Main\-Model@{Main\-Model}!C\-A\-L\-C\-U\-L\-A\-T\-I\-N\-G@{C\-A\-L\-C\-U\-L\-A\-T\-I\-N\-G}}\item[{\em 
+\hypertarget{classMainModel_ab0047ea86efa2a40e9aff734f897c330a7bc326ea163e937856ec2e520548e7f8}{C\-A\-L\-C\-U\-L\-A\-T\-I\-N\-G}\label{classMainModel_ab0047ea86efa2a40e9aff734f897c330a7bc326ea163e937856ec2e520548e7f8}
+}]A calculation is in progress, solution\-State is updated when the calculation is done \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMainModel_a6c11a3942ed91eda77c4901d3d4f95b5}{\index{Main\-Model@{Main\-Model}!Main\-Model@{Main\-Model}}
+\index{Main\-Model@{Main\-Model}!MainModel@{Main\-Model}}
+\subsubsection[{Main\-Model}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Model\-::\-Main\-Model (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{config\-File = {\ttfamily \char`\"{}options.xml\char`\"{}}, }
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classMainModel_a6c11a3942ed91eda77c4901d3d4f95b5}
+
+
+Constructs a new {\ttfamily \hyperlink{classMainModel}{Main\-Model}}. 
+
+The main model is initialized with options from a given configuration file. 
+\begin{DoxyParams}{Parameters}
+{\em config\-File} & a (relative) path to a configuration file \\
+\hline
+{\em parent} & the object's parent \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classDDTConfiguration}{D\-D\-T\-Configuration} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMainModel_adf2889da5df77b5fc400d342b3f5ed41}{\index{Main\-Model@{Main\-Model}!add\-Speaker@{add\-Speaker}}
+\index{add\-Speaker@{add\-Speaker}!MainModel@{Main\-Model}}
+\subsubsection[{add\-Speaker}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Model\-::add\-Speaker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMainModel_adf2889da5df77b5fc400d342b3f5ed41}
+
+
+Same as. 
+
+
+\begin{DoxyCode}
+\hyperlink{classMainModel_adf2889da5df77b5fc400d342b3f5ed41}{addSpeaker}(\textcolor{stringliteral}{""}) 
+\end{DoxyCode}
+ \hypertarget{classMainModel_a147b472af630f6b175f2d511588a71eb}{\index{Main\-Model@{Main\-Model}!add\-Team@{add\-Team}}
+\index{add\-Team@{add\-Team}!MainModel@{Main\-Model}}
+\subsubsection[{add\-Team}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Team} $\ast$ Main\-Model\-::add\-Team (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMainModel_a147b472af630f6b175f2d511588a71eb}
+
+
+Adds a new, empty team to the application's team list. 
+
+\begin{DoxyReturn}{Returns}
+the added team 
+\end{DoxyReturn}
+\hypertarget{classMainModel_af63b7f3d86b50f920510c420c209618f}{\index{Main\-Model@{Main\-Model}!add\-Team@{add\-Team}}
+\index{add\-Team@{add\-Team}!MainModel@{Main\-Model}}
+\subsubsection[{add\-Team}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Team} $\ast$ Main\-Model\-::add\-Team (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classMainModel_af63b7f3d86b50f920510c420c209618f}
+
+
+add\-Team Adds a new, empty team with a given name to the team list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the team's name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the added team 
+\end{DoxyReturn}
+\hypertarget{classMainModel_a34dbbb7962b6e0adb074b66a5b2f8056}{\index{Main\-Model@{Main\-Model}!errors@{errors}}
+\index{errors@{errors}!MainModel@{Main\-Model}}
+\subsubsection[{errors}]{\setlength{\rightskip}{0pt plus 5cm}Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E Q\-String\-List Main\-Model\-::errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMainModel_a34dbbb7962b6e0adb074b66a5b2f8056}
+
+
+Returns a list of error descriptions. 
+
+The errors need to be fixed before a solution can be generated. They can be presented to the users and give clues why no solution exists (see \hyperlink{classMainModel_a247bfaf9d5b5083ab21a81be2f80c2f2}{solution\-State}). The return value is undefined if the solution state is different than \hyperlink{classMainModel_ab0047ea86efa2a40e9aff734f897c330a10b96c9ee5c7b402033d5397b00be38d}{N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S} . \hypertarget{classMainModel_a0fca04016af7c3ff89f3d15693acc9a5}{\index{Main\-Model@{Main\-Model}!generate\-New\-Solution@{generate\-New\-Solution}}
+\index{generate\-New\-Solution@{generate\-New\-Solution}!MainModel@{Main\-Model}}
+\subsubsection[{generate\-New\-Solution}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Model\-::generate\-New\-Solution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMainModel_a0fca04016af7c3ff89f3d15693acc9a5}
+
+
+Generates a new solution and stores it internally. 
+
+Call \hyperlink{classMainModel_a99c4429479554c669311b860da91b2b8}{init\-Solver()}; before attempting to call this method. The solution state will be set to C\-A\-L\-C\-U\-L\-A\-T\-I\-N\-G, once the solution is finished the state changes to N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S or S\-O\-L\-U\-T\-I\-O\-N\-\_\-\-E\-X\-I\-S\-T\-S. The generated solution is stored internally and can be read with get\-Solution. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classMainModel_a8c4d8dc4d4aaea3046ab809fc5deffde}{solution\-Count} 
+\end{DoxySeeAlso}
+\hypertarget{classMainModel_a1a00e342ab4f1c27429ca894aa7ed8d4}{\index{Main\-Model@{Main\-Model}!interrupt\-Calculation@{interrupt\-Calculation}}
+\index{interrupt\-Calculation@{interrupt\-Calculation}!MainModel@{Main\-Model}}
+\subsubsection[{interrupt\-Calculation}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Model\-::interrupt\-Calculation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMainModel_a1a00e342ab4f1c27429ca894aa7ed8d4}
+Interrupts the current calculation. Calling this method when no calculation takes place has no effect. \hypertarget{classMainModel_a7711f1bb52f6427936653cccbcbbacf6}{\index{Main\-Model@{Main\-Model}!set\-Language@{set\-Language}}
+\index{set\-Language@{set\-Language}!MainModel@{Main\-Model}}
+\subsubsection[{set\-Language}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Model\-::set\-Language (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{lang}
+\end{DoxyParamCaption}
+)}}\label{classMainModel_a7711f1bb52f6427936653cccbcbbacf6}
+Sets the applications language. The change will only take effect if the configuration file is written (write\-Configuration) and the application restarted. \hypertarget{classMainModel_a0d65d53d33d977e4f5522327abddf232}{\index{Main\-Model@{Main\-Model}!update\-Names@{update\-Names}}
+\index{update\-Names@{update\-Names}!MainModel@{Main\-Model}}
+\subsubsection[{update\-Names}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Model\-::update\-Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMainModel_a0d65d53d33d977e4f5522327abddf232}
+Reads all names of the application's speakers and adds them to the name pool of auto\-Complete\-Model. Furthermore, all names will be stored in a configuration file once write\-Configuration is called. \hypertarget{classMainModel_a91c905241023334ee91b97b69a14e87c}{\index{Main\-Model@{Main\-Model}!write\-Configuration@{write\-Configuration}}
+\index{write\-Configuration@{write\-Configuration}!MainModel@{Main\-Model}}
+\subsubsection[{write\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Model\-::write\-Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMainModel_a91c905241023334ee91b97b69a14e87c}
+Writes all options into a configuration file. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/src/mainmodel.\-h\item 
+/home/stoef/qt/projects/ddt/ddt/src/mainmodel.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,100 @@
+\hypertarget{classDDTConfiguration}{\section{D\-D\-T\-Configuration Class Reference}
+\label{classDDTConfiguration}\index{D\-D\-T\-Configuration@{D\-D\-T\-Configuration}}
+}
+
+
+Reads options from a file.  
+
+
+
+
+{\ttfamily \#include $<$ddtconfiguration.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDDTConfiguration_aa8b20f6bcfe2b3ddf61b96f2bab59cca}{D\-D\-T\-Configuration} (Q\-String file\-Name)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDDTConfiguration}{D\-D\-T\-Configuration} Creates a new configuration object for a given configuration file. \end{DoxyCompactList}\item 
+\hypertarget{classDDTConfiguration_a581c7466f9b308272470c1699601cf36}{void {\bfseries write\-Configuration\-File} (Q\-String file\-Name)}\label{classDDTConfiguration_a581c7466f9b308272470c1699601cf36}
+
+\item 
+Q\-Set$<$ Q\-String $>$ \hyperlink{classDDTConfiguration_a5124fbeb717acce377a1fbf8218b6d6d}{names} () const 
+\begin{DoxyCompactList}\small\item\em Returns a list of names used for autocompletion. \end{DoxyCompactList}\item 
+\hypertarget{classDDTConfiguration_ae74e28f9991535f8ff9af2c698c42cd4}{void \hyperlink{classDDTConfiguration_ae74e28f9991535f8ff9af2c698c42cd4}{add\-Name} (Q\-String name)}\label{classDDTConfiguration_ae74e28f9991535f8ff9af2c698c42cd4}
+
+\begin{DoxyCompactList}\small\item\em add\-Name Adds a name to the list of known names used for autocompletion. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{classDDTConfiguration_aa6668d1848c30dccba2c2cfdbd9b7a5e}{language} () const 
+\begin{DoxyCompactList}\small\item\em Returns the applications language (e.\-g. \char`\"{}en\char`\"{} or \char`\"{}de\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{classDDTConfiguration_acc4051a3d29fedeaafcbfc6020962e3b}{set\-Language} (Q\-String \hyperlink{classDDTConfiguration_aa6668d1848c30dccba2c2cfdbd9b7a5e}{language})
+\begin{DoxyCompactList}\small\item\em Sets the applications language that will be written in the configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reads options from a file. 
+
+Reads generic configuration options from a given file, e.\-g. the applications language. The configuration is an xml-\/formatted document. Furthermore, writing or creating property files is supported. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDDTConfiguration_aa8b20f6bcfe2b3ddf61b96f2bab59cca}{\index{D\-D\-T\-Configuration@{D\-D\-T\-Configuration}!D\-D\-T\-Configuration@{D\-D\-T\-Configuration}}
+\index{D\-D\-T\-Configuration@{D\-D\-T\-Configuration}!DDTConfiguration@{D\-D\-T\-Configuration}}
+\subsubsection[{D\-D\-T\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}D\-D\-T\-Configuration\-::\-D\-D\-T\-Configuration (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{classDDTConfiguration_aa8b20f6bcfe2b3ddf61b96f2bab59cca}
+
+
+\hyperlink{classDDTConfiguration}{D\-D\-T\-Configuration} Creates a new configuration object for a given configuration file. 
+
+A warning is given if the configuration file could not be loaded. In this case the class will return default values as properties 
+\begin{DoxyParams}{Parameters}
+{\em file\-Name} & the (relative) path to the configuration file. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDDTConfiguration_aa6668d1848c30dccba2c2cfdbd9b7a5e}{\index{D\-D\-T\-Configuration@{D\-D\-T\-Configuration}!language@{language}}
+\index{language@{language}!DDTConfiguration@{D\-D\-T\-Configuration}}
+\subsubsection[{language}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String D\-D\-T\-Configuration\-::language (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDDTConfiguration_aa6668d1848c30dccba2c2cfdbd9b7a5e}
+
+
+Returns the applications language (e.\-g. \char`\"{}en\char`\"{} or \char`\"{}de\char`\"{}) 
+
+An empty string is returned if the configuration file could not be loaded. \hypertarget{classDDTConfiguration_a5124fbeb717acce377a1fbf8218b6d6d}{\index{D\-D\-T\-Configuration@{D\-D\-T\-Configuration}!names@{names}}
+\index{names@{names}!DDTConfiguration@{D\-D\-T\-Configuration}}
+\subsubsection[{names}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Set$<$Q\-String$>$ D\-D\-T\-Configuration\-::names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDDTConfiguration_a5124fbeb717acce377a1fbf8218b6d6d}
+
+
+Returns a list of names used for autocompletion. 
+
+An empty list is returned if the configuration file could not be loaded. \hypertarget{classDDTConfiguration_acc4051a3d29fedeaafcbfc6020962e3b}{\index{D\-D\-T\-Configuration@{D\-D\-T\-Configuration}!set\-Language@{set\-Language}}
+\index{set\-Language@{set\-Language}!DDTConfiguration@{D\-D\-T\-Configuration}}
+\subsubsection[{set\-Language}]{\setlength{\rightskip}{0pt plus 5cm}void D\-D\-T\-Configuration\-::set\-Language (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{language}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDDTConfiguration_acc4051a3d29fedeaafcbfc6020962e3b}
+
+
+Sets the applications language that will be written in the configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em language} & a country code \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/src/ddtconfiguration.\-h\item 
+/home/stoef/qt/projects/ddt/ddt/src/ddtconfiguration.\-cpp\end{DoxyCompactItemize}
