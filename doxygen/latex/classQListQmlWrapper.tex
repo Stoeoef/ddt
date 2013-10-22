@@ -1,0 +1,154 @@
+\hypertarget{classQListQmlWrapper}{\section{Q\-List\-Qml\-Wrapper Class Reference}
+\label{classQListQmlWrapper}\index{Q\-List\-Qml\-Wrapper@{Q\-List\-Qml\-Wrapper}}
+}
+
+
+Allows accessing a cpp list in Q\-M\-L.  
+
+
+
+
+{\ttfamily \#include $<$qlistqmlwrapper.\-h$>$}
+
+Inheritance diagram for Q\-List\-Qml\-Wrapper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQListQmlWrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E bool \hyperlink{classQListQmlWrapper_a08ee51fb27c3c6e6c21685cec176dfe0}{remove} (Q\-Object $\ast$object)
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classQListQmlWrapper_a098f245657e03039eb01ef586dba9b5e}{list\-Changed} ()
+\item 
+\hypertarget{classQListQmlWrapper_a926184c29000446a6f4301a5fc57de4e}{void {\bfseries row\-Count\-Changed} ()}\label{classQListQmlWrapper_a926184c29000446a6f4301a5fc57de4e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQListQmlWrapper_aeef385347fe1fc0c299f26046652a56c}{Q\-List\-Qml\-Wrapper} (Q\-Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classQListQmlWrapper}{Q\-List\-Qml\-Wrapper} with a given parent. \end{DoxyCompactList}\item 
+\hypertarget{classQListQmlWrapper_ad6bb3bc6cf1044720c77962ed3d028e2}{Q\-Variant {\bfseries data} (const Q\-Model\-Index \&index, int role) const }\label{classQListQmlWrapper_ad6bb3bc6cf1044720c77962ed3d028e2}
+
+\item 
+\hypertarget{classQListQmlWrapper_a9ecb0a6b14f74c75e5d871542a07c8ba}{bool {\bfseries set\-Data} (const Q\-Model\-Index \&index, const Q\-Variant \&value, int role)}\label{classQListQmlWrapper_a9ecb0a6b14f74c75e5d871542a07c8ba}
+
+\item 
+\hypertarget{classQListQmlWrapper_a38d2b1788b6943874cdc465dc437331c}{virtual Q\-Hash$<$ int, Q\-Byte\-Array $>$ {\bfseries role\-Names} () const }\label{classQListQmlWrapper_a38d2b1788b6943874cdc465dc437331c}
+
+\item 
+\hypertarget{classQListQmlWrapper_a382a39110f33537bff9f49d7c0fd4fdf}{Qt\-::\-Item\-Flags {\bfseries flags} (const Q\-Model\-Index \&index) const }\label{classQListQmlWrapper_a382a39110f33537bff9f49d7c0fd4fdf}
+
+\item 
+\hypertarget{classQListQmlWrapper_a156c45b9f122fea8394ec821f47c41fe}{int {\bfseries row\-Count} (const Q\-Model\-Index \&parent=Q\-Model\-Index()) const }\label{classQListQmlWrapper_a156c45b9f122fea8394ec821f47c41fe}
+
+\item 
+\hypertarget{classQListQmlWrapper_a78ba996cd2cff329e8cb6081e986b056}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classQListQmlWrapper_a78ba996cd2cff329e8cb6081e986b056}{append\-Row} (Q\-Object $\ast$item)}\label{classQListQmlWrapper_a78ba996cd2cff329e8cb6081e986b056}
+
+\begin{DoxyCompactList}\small\item\em Appends an item to the wrapper's list. \end{DoxyCompactList}\item 
+\hypertarget{classQListQmlWrapper_ae580eaadaa6abb6f5f9ca6bbb5b91fa6}{void \hyperlink{classQListQmlWrapper_ae580eaadaa6abb6f5f9ca6bbb5b91fa6}{append\-Rows} (const Q\-List$<$ Q\-Object $\ast$ $>$ \&items)}\label{classQListQmlWrapper_ae580eaadaa6abb6f5f9ca6bbb5b91fa6}
+
+\begin{DoxyCompactList}\small\item\em Appends multiple item's to the wrapper's list. \end{DoxyCompactList}\item 
+\hypertarget{classQListQmlWrapper_a3e433fd322140e50f6de31d786fd1e90}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classQListQmlWrapper_a3e433fd322140e50f6de31d786fd1e90}{insert\-Row} (int row, Q\-Object $\ast$item)}\label{classQListQmlWrapper_a3e433fd322140e50f6de31d786fd1e90}
+
+\begin{DoxyCompactList}\small\item\em Inserts an item at a specific position. \end{DoxyCompactList}\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E bool \hyperlink{classQListQmlWrapper_ab23231912af75b767ed96a5061c18810}{remove\-Row} (int row, const Q\-Model\-Index \&parent=Q\-Model\-Index())
+\item 
+\hypertarget{classQListQmlWrapper_a2daa2ca530b342bd493928a4cf99eb22}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E bool \hyperlink{classQListQmlWrapper_a2daa2ca530b342bd493928a4cf99eb22}{remove\-Rows} (int row, int count, const Q\-Model\-Index \&parent=Q\-Model\-Index())}\label{classQListQmlWrapper_a2daa2ca530b342bd493928a4cf99eb22}
+
+\begin{DoxyCompactList}\small\item\em Removes {\ttfamily count} items, starting from index {\ttfamily row} . \end{DoxyCompactList}\item 
+\hypertarget{classQListQmlWrapper_a7baf8a6a8a3232a227423ddae0cd261b}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E Q\-Object $\ast$ \hyperlink{classQListQmlWrapper_a7baf8a6a8a3232a227423ddae0cd261b}{take\-Row} (int row)}\label{classQListQmlWrapper_a7baf8a6a8a3232a227423ddae0cd261b}
+
+\begin{DoxyCompactList}\small\item\em Removes and returns an item at position {\ttfamily row} . \end{DoxyCompactList}\item 
+\hypertarget{classQListQmlWrapper_a3ec0f6232df2dfee1eb2e2334efc76aa}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classQListQmlWrapper_a3ec0f6232df2dfee1eb2e2334efc76aa}{clear} ()}\label{classQListQmlWrapper_a3ec0f6232df2dfee1eb2e2334efc76aa}
+
+\begin{DoxyCompactList}\small\item\em Removes all roles. \end{DoxyCompactList}\item 
+\hypertarget{classQListQmlWrapper_a6d3cd7291fa7b1d79b6bd488dc549e4f}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E bool \hyperlink{classQListQmlWrapper_a6d3cd7291fa7b1d79b6bd488dc549e4f}{contains} (Q\-Object $\ast$object)}\label{classQListQmlWrapper_a6d3cd7291fa7b1d79b6bd488dc549e4f}
+
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily true} if {\ttfamily object} is contained in the wrappers list. \end{DoxyCompactList}\item 
+Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E int \hyperlink{classQListQmlWrapper_a9430d2a06f3ee285538717f874d9f876}{index\-Of} (Q\-Object $\ast$object)
+\item 
+\hypertarget{classQListQmlWrapper_a473a63842191ef808dc8e5c1047f9f8f}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E Q\-Object $\ast$ \hyperlink{classQListQmlWrapper_a473a63842191ef808dc8e5c1047f9f8f}{get\-Row} (int row) const }\label{classQListQmlWrapper_a473a63842191ef808dc8e5c1047f9f8f}
+
+\begin{DoxyCompactList}\small\item\em Returns the row at a given position. \end{DoxyCompactList}\item 
+\hypertarget{classQListQmlWrapper_a4f476937745f5cb9cdfc5a8849e820a8}{const Q\-List$<$ Q\-Object $\ast$ $>$ $\ast$ \hyperlink{classQListQmlWrapper_a4f476937745f5cb9cdfc5a8849e820a8}{list} ()}\label{classQListQmlWrapper_a4f476937745f5cb9cdfc5a8849e820a8}
+
+\begin{DoxyCompactList}\small\item\em Returns the list represented by this wrapper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQListQmlWrapper_a3aaa4cbf86d838af871a98d96fcbfe52}{int \hyperlink{classQListQmlWrapper_a3aaa4cbf86d838af871a98d96fcbfe52}{row\-Count}}\label{classQListQmlWrapper_a3aaa4cbf86d838af871a98d96fcbfe52}
+
+\begin{DoxyCompactList}\small\item\em Holds the wrapper's number of items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allows accessing a cpp list in Q\-M\-L. 
+
+Q\-M\-L cannot handle lists of type {\ttfamily Q\-List}. This class fills this gap by offering a list like interface on the cpp side while inheriting {\ttfamily Q\-Abstract\-List\-Model}, which is neccessary for elements like the Q\-M\-L {\ttfamily List\-View}. A \hyperlink{classQListQmlWrapper}{Q\-List\-Qml\-Wrapper} can be set directly as a List\-View's, model, the model item roles are specified by a concrete subclass of  . See role\-Names for details.\par
+Deleting an item will automatically remove it from the wrapper's list. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQListQmlWrapper_aeef385347fe1fc0c299f26046652a56c}{\index{Q\-List\-Qml\-Wrapper@{Q\-List\-Qml\-Wrapper}!Q\-List\-Qml\-Wrapper@{Q\-List\-Qml\-Wrapper}}
+\index{Q\-List\-Qml\-Wrapper@{Q\-List\-Qml\-Wrapper}!QListQmlWrapper@{Q\-List\-Qml\-Wrapper}}
+\subsubsection[{Q\-List\-Qml\-Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List\-Qml\-Wrapper\-::\-Q\-List\-Qml\-Wrapper (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classQListQmlWrapper_aeef385347fe1fc0c299f26046652a56c}
+
+
+Creates a new \hyperlink{classQListQmlWrapper}{Q\-List\-Qml\-Wrapper} with a given parent. 
+
+The wrapper's list is initially empty. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & the object's parent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classQListQmlWrapper_a9430d2a06f3ee285538717f874d9f876}{\index{Q\-List\-Qml\-Wrapper@{Q\-List\-Qml\-Wrapper}!index\-Of@{index\-Of}}
+\index{index\-Of@{index\-Of}!QListQmlWrapper@{Q\-List\-Qml\-Wrapper}}
+\subsubsection[{index\-Of}]{\setlength{\rightskip}{0pt plus 5cm}int Q\-List\-Qml\-Wrapper\-::index\-Of (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{classQListQmlWrapper_a9430d2a06f3ee285538717f874d9f876}
+Return the first occurence of a given object in the wrappers list. Returns -\/1 if the object is not contained. \hypertarget{classQListQmlWrapper_a098f245657e03039eb01ef586dba9b5e}{\index{Q\-List\-Qml\-Wrapper@{Q\-List\-Qml\-Wrapper}!list\-Changed@{list\-Changed}}
+\index{list\-Changed@{list\-Changed}!QListQmlWrapper@{Q\-List\-Qml\-Wrapper}}
+\subsubsection[{list\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-List\-Qml\-Wrapper\-::list\-Changed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{classQListQmlWrapper_a098f245657e03039eb01ef586dba9b5e}
+Emitted when items were added, moved or removed, or when an item's proeprty has changed. \hypertarget{classQListQmlWrapper_a08ee51fb27c3c6e6c21685cec176dfe0}{\index{Q\-List\-Qml\-Wrapper@{Q\-List\-Qml\-Wrapper}!remove@{remove}}
+\index{remove@{remove}!QListQmlWrapper@{Q\-List\-Qml\-Wrapper}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-List\-Qml\-Wrapper\-::remove (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classQListQmlWrapper_a08ee51fb27c3c6e6c21685cec176dfe0}
+Removes one occurence of  from the list. Returns {\ttfamily true} if an occurence could be removed \hypertarget{classQListQmlWrapper_ab23231912af75b767ed96a5061c18810}{\index{Q\-List\-Qml\-Wrapper@{Q\-List\-Qml\-Wrapper}!remove\-Row@{remove\-Row}}
+\index{remove\-Row@{remove\-Row}!QListQmlWrapper@{Q\-List\-Qml\-Wrapper}}
+\subsubsection[{remove\-Row}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-List\-Qml\-Wrapper\-::remove\-Row (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{const Q\-Model\-Index \&}]{parent = {\ttfamily QModelIndex()}}
+\end{DoxyParamCaption}
+)}}\label{classQListQmlWrapper_ab23231912af75b767ed96a5061c18810}
+Removes an item with a given index. \begin{DoxyReturn}{Returns}
+{\ttfamily true} the given row index was valid and an item was removed. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/src/qlistqmlwrapper.\-h\item 
+/home/stoef/qt/projects/ddt/ddt/src/qlistqmlwrapper.\-cpp\end{DoxyCompactItemize}

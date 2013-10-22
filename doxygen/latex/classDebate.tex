@@ -1,0 +1,152 @@
+\hypertarget{classDebate}{\section{Debate Class Reference}
+\label{classDebate}\index{Debate@{Debate}}
+}
+
+
+Represents an abstract debate.  
+
+
+
+
+{\ttfamily \#include $<$debate.\-h$>$}
+
+Inheritance diagram for Debate\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDebate}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classDebate_a537fac343de1edd412012e4180b52e04}{Debate\-Format} \{ \hyperlink{classDebate_a537fac343de1edd412012e4180b52e04a57900d539b2f8b08fba5e1df1622a3ad}{O\-P\-D}, 
+\hyperlink{classDebate_a537fac343de1edd412012e4180b52e04afbefbbcc339cee2cb34f1be57d2168da}{B\-P\-S}
+ \}
+\begin{DoxyCompactList}\small\item\em Contains all supported debate formats. \end{DoxyCompactList}\item 
+enum \hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4}{Role\-Group} \{ \\*
+\hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a51e2aa8f170ffbd3573aa117ca5f3eef}{J\-U\-D\-I\-C\-A\-T\-O\-R}, 
+\hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a2556968b87c809f30b3e88ecf9a04180}{O\-P\-D\-\_\-\-G\-O\-V}, 
+\hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a7232cd09530cdbdd6b3f460de7ff2746}{O\-P\-D\-\_\-\-O\-P}, 
+\hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a9682891e23a589be8ffeeb19a907ae75}{O\-P\-D\-\_\-\-F\-F\-R}, 
+\\*
+\hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4ae40d7e19be9a051ac4967d2bc815d851}{B\-P\-S\-\_\-\-G\-O\-V1}, 
+\hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a519b0f35d90b536816035fa9fa1e52f7}{B\-P\-S\-\_\-\-G\-O\-V2}, 
+\hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a950ec765be37e52b2b93e5cfc619048d}{B\-P\-S\-\_\-\-O\-P1}, 
+\hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a09554f5050ad1a7de30cdfab1a4bb463}{B\-P\-S\-\_\-\-O\-P2}
+ \}
+\begin{DoxyCompactList}\small\item\em Contains all possible roles that speakers of a debate can have. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDebate_a726099cea8180ac30a25ef2db7ff196e}{void {\bfseries room\-Changed} ()}\label{classDebate_a726099cea8180ac30a25ef2db7ff196e}
+
+\item 
+\hypertarget{classDebate_a66121202f07f259469f34339830bbb07}{void {\bfseries num\-Places\-Changed} ()}\label{classDebate_a66121202f07f259469f34339830bbb07}
+
+\item 
+\hypertarget{classDebate_a0901bfe451901b6d31ab5c7ecbef8d4a}{void {\bfseries judicator\-Places\-Changed} ()}\label{classDebate_a0901bfe451901b6d31ab5c7ecbef8d4a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDebate_a89c49e04f0f5be4690ae6a0f231e2d57}{\hyperlink{classDebate_a89c49e04f0f5be4690ae6a0f231e2d57}{Debate} (Q\-Object $\ast$parent=0)}\label{classDebate_a89c49e04f0f5be4690ae6a0f231e2d57}
+
+\begin{DoxyCompactList}\small\item\em Creates a new debate with a given parent. \end{DoxyCompactList}\item 
+\hypertarget{classDebate_a6976d53aef96511860ee0610b35ef5d0}{Q\-String {\bfseries room} ()}\label{classDebate_a6976d53aef96511860ee0610b35ef5d0}
+
+\item 
+\hypertarget{classDebate_ad4d918691e512ca0e9f8bdfde1b60a7d}{void {\bfseries set\-Room} (Q\-String \hyperlink{classDebate_acab8c12e87212bbc6f14ce180bbdeccb}{room})}\label{classDebate_ad4d918691e512ca0e9f8bdfde1b60a7d}
+
+\item 
+\hypertarget{classDebate_a08898c144700ac4bfdf8176e79714c7c}{int {\bfseries judicator\-Places} ()}\label{classDebate_a08898c144700ac4bfdf8176e79714c7c}
+
+\item 
+\hypertarget{classDebate_a3a21fd3392281d2f1be94b8978c30e98}{void {\bfseries set\-Judicator\-Places} (int \hyperlink{classDebate_a871a42bb78323df624bd51ee733d3f5d}{judicator\-Places})}\label{classDebate_a3a21fd3392281d2f1be94b8978c30e98}
+
+\item 
+\hypertarget{classDebate_af280a91845695a6ad94e0a6bf6972a84}{virtual \hyperlink{classDebate_a537fac343de1edd412012e4180b52e04}{Debate\-Format} {\bfseries format} ()=0}\label{classDebate_af280a91845695a6ad94e0a6bf6972a84}
+
+\item 
+\hypertarget{classDebate_a52d7e3651ac81f31e3439a824b862f29}{virtual int {\bfseries num\-Places} ()}\label{classDebate_a52d7e3651ac81f31e3439a824b862f29}
+
+\item 
+\hypertarget{classDebate_ad4c84895868fd2e55e8d98c81afae7c6}{virtual const Q\-List$<$ \hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4}{Role\-Group} $>$ $\ast$ \hyperlink{classDebate_ad4c84895868fd2e55e8d98c81afae7c6}{get\-Roles\-For\-Debate} ()=0}\label{classDebate_ad4c84895868fd2e55e8d98c81afae7c6}
+
+\begin{DoxyCompactList}\small\item\em Returns all roles that belong to this debate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDebate_a871a42bb78323df624bd51ee733d3f5d}{int \hyperlink{classDebate_a871a42bb78323df624bd51ee733d3f5d}{judicator\-Places}}\label{classDebate_a871a42bb78323df624bd51ee733d3f5d}
+
+\begin{DoxyCompactList}\small\item\em Holds the number of judicators used in this debates. Defaults to 1. \end{DoxyCompactList}\item 
+\hypertarget{classDebate_acad1ad74183da0c383be84c62125efc4}{\hyperlink{classDebate_a537fac343de1edd412012e4180b52e04}{Debate\-Format} \hyperlink{classDebate_acad1ad74183da0c383be84c62125efc4}{format}}\label{classDebate_acad1ad74183da0c383be84c62125efc4}
+
+\begin{DoxyCompactList}\small\item\em Holds the debates format. \end{DoxyCompactList}\item 
+\hypertarget{classDebate_acab8c12e87212bbc6f14ce180bbdeccb}{Q\-String \hyperlink{classDebate_acab8c12e87212bbc6f14ce180bbdeccb}{room}}\label{classDebate_acab8c12e87212bbc6f14ce180bbdeccb}
+
+\begin{DoxyCompactList}\small\item\em Holds the debates room. The room can be in arbitrary string. \end{DoxyCompactList}\item 
+\hypertarget{classDebate_ad61df7c5685157f80dfb46c6efce4bce}{int \hyperlink{classDebate_ad61df7c5685157f80dfb46c6efce4bce}{num\-Places}}\label{classDebate_ad61df7c5685157f80dfb46c6efce4bce}
+
+\begin{DoxyCompactList}\small\item\em Holds the complete number of places within this debate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents an abstract debate. 
+
+This class serves as a superclass for all different debate formats. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classOPDebate}{O\-P\-Debate} \hyperlink{classBPSDebate}{B\-P\-S\-Debate} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classDebate_a537fac343de1edd412012e4180b52e04}{\index{Debate@{Debate}!Debate\-Format@{Debate\-Format}}
+\index{Debate\-Format@{Debate\-Format}!Debate@{Debate}}
+\subsubsection[{Debate\-Format}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Debate\-::\-Debate\-Format}}}\label{classDebate_a537fac343de1edd412012e4180b52e04}
+
+
+Contains all supported debate formats. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\-P\-D@{O\-P\-D}!Debate@{Debate}}\index{Debate@{Debate}!O\-P\-D@{O\-P\-D}}\item[{\em 
+\hypertarget{classDebate_a537fac343de1edd412012e4180b52e04a57900d539b2f8b08fba5e1df1622a3ad}{O\-P\-D}\label{classDebate_a537fac343de1edd412012e4180b52e04a57900d539b2f8b08fba5e1df1622a3ad}
+}]Offene Parlamentarische Debatte, see \hyperlink{classOPDebate}{O\-P\-Debate} \index{B\-P\-S@{B\-P\-S}!Debate@{Debate}}\index{Debate@{Debate}!B\-P\-S@{B\-P\-S}}\item[{\em 
+\hypertarget{classDebate_a537fac343de1edd412012e4180b52e04afbefbbcc339cee2cb34f1be57d2168da}{B\-P\-S}\label{classDebate_a537fac343de1edd412012e4180b52e04afbefbbcc339cee2cb34f1be57d2168da}
+}]British Parliamentary Style debate, see \hyperlink{classBPSDebate}{B\-P\-S\-Debate} \end{description}
+\end{Desc}
+\hypertarget{classDebate_ae9871a36a2f3de7a7da8922d70fbece4}{\index{Debate@{Debate}!Role\-Group@{Role\-Group}}
+\index{Role\-Group@{Role\-Group}!Debate@{Debate}}
+\subsubsection[{Role\-Group}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Debate\-::\-Role\-Group}}}\label{classDebate_ae9871a36a2f3de7a7da8922d70fbece4}
+
+
+Contains all possible roles that speakers of a debate can have. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{J\-U\-D\-I\-C\-A\-T\-O\-R@{J\-U\-D\-I\-C\-A\-T\-O\-R}!Debate@{Debate}}\index{Debate@{Debate}!J\-U\-D\-I\-C\-A\-T\-O\-R@{J\-U\-D\-I\-C\-A\-T\-O\-R}}\item[{\em 
+\hypertarget{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a51e2aa8f170ffbd3573aa117ca5f3eef}{J\-U\-D\-I\-C\-A\-T\-O\-R}\label{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a51e2aa8f170ffbd3573aa117ca5f3eef}
+}]The judicator role \index{O\-P\-D\-\_\-\-G\-O\-V@{O\-P\-D\-\_\-\-G\-O\-V}!Debate@{Debate}}\index{Debate@{Debate}!O\-P\-D\-\_\-\-G\-O\-V@{O\-P\-D\-\_\-\-G\-O\-V}}\item[{\em 
+\hypertarget{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a2556968b87c809f30b3e88ecf9a04180}{O\-P\-D\-\_\-\-G\-O\-V}\label{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a2556968b87c809f30b3e88ecf9a04180}
+}]The government role of O\-P\-D \index{O\-P\-D\-\_\-\-O\-P@{O\-P\-D\-\_\-\-O\-P}!Debate@{Debate}}\index{Debate@{Debate}!O\-P\-D\-\_\-\-O\-P@{O\-P\-D\-\_\-\-O\-P}}\item[{\em 
+\hypertarget{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a7232cd09530cdbdd6b3f460de7ff2746}{O\-P\-D\-\_\-\-O\-P}\label{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a7232cd09530cdbdd6b3f460de7ff2746}
+}]The opposition role of O\-P\-D \index{O\-P\-D\-\_\-\-F\-F\-R@{O\-P\-D\-\_\-\-F\-F\-R}!Debate@{Debate}}\index{Debate@{Debate}!O\-P\-D\-\_\-\-F\-F\-R@{O\-P\-D\-\_\-\-F\-F\-R}}\item[{\em 
+\hypertarget{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a9682891e23a589be8ffeeb19a907ae75}{O\-P\-D\-\_\-\-F\-F\-R}\label{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a9682891e23a589be8ffeeb19a907ae75}
+}]The F\-F\-R role of O\-P\-D \index{B\-P\-S\-\_\-\-G\-O\-V1@{B\-P\-S\-\_\-\-G\-O\-V1}!Debate@{Debate}}\index{Debate@{Debate}!B\-P\-S\-\_\-\-G\-O\-V1@{B\-P\-S\-\_\-\-G\-O\-V1}}\item[{\em 
+\hypertarget{classDebate_ae9871a36a2f3de7a7da8922d70fbece4ae40d7e19be9a051ac4967d2bc815d851}{B\-P\-S\-\_\-\-G\-O\-V1}\label{classDebate_ae9871a36a2f3de7a7da8922d70fbece4ae40d7e19be9a051ac4967d2bc815d851}
+}]The first government role of B\-P\-S \index{B\-P\-S\-\_\-\-G\-O\-V2@{B\-P\-S\-\_\-\-G\-O\-V2}!Debate@{Debate}}\index{Debate@{Debate}!B\-P\-S\-\_\-\-G\-O\-V2@{B\-P\-S\-\_\-\-G\-O\-V2}}\item[{\em 
+\hypertarget{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a519b0f35d90b536816035fa9fa1e52f7}{B\-P\-S\-\_\-\-G\-O\-V2}\label{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a519b0f35d90b536816035fa9fa1e52f7}
+}]The second government role of B\-P\-S \index{B\-P\-S\-\_\-\-O\-P1@{B\-P\-S\-\_\-\-O\-P1}!Debate@{Debate}}\index{Debate@{Debate}!B\-P\-S\-\_\-\-O\-P1@{B\-P\-S\-\_\-\-O\-P1}}\item[{\em 
+\hypertarget{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a950ec765be37e52b2b93e5cfc619048d}{B\-P\-S\-\_\-\-O\-P1}\label{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a950ec765be37e52b2b93e5cfc619048d}
+}]The first opposition role of B\-P\-S \index{B\-P\-S\-\_\-\-O\-P2@{B\-P\-S\-\_\-\-O\-P2}!Debate@{Debate}}\index{Debate@{Debate}!B\-P\-S\-\_\-\-O\-P2@{B\-P\-S\-\_\-\-O\-P2}}\item[{\em 
+\hypertarget{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a09554f5050ad1a7de30cdfab1a4bb463}{B\-P\-S\-\_\-\-O\-P2}\label{classDebate_ae9871a36a2f3de7a7da8922d70fbece4a09554f5050ad1a7de30cdfab1a4bb463}
+}]The second opposition role of B\-P\-S \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/src/debate.\-h\item 
+/home/stoef/qt/projects/ddt/ddt/src/debate.\-cpp\end{DoxyCompactItemize}

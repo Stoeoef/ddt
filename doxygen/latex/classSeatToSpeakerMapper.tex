@@ -1,0 +1,92 @@
+\hypertarget{classSeatToSpeakerMapper}{\section{Seat\-To\-Speaker\-Mapper Class Reference}
+\label{classSeatToSpeakerMapper}\index{Seat\-To\-Speaker\-Mapper@{Seat\-To\-Speaker\-Mapper}}
+}
+
+
+Represents the results of a matching process.  
+
+
+
+
+{\ttfamily \#include $<$seattospeakermapper.\-h$>$}
+
+Inheritance diagram for Seat\-To\-Speaker\-Mapper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSeatToSpeakerMapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSeatToSpeakerMapper_a9978292542a75eef5da708caf487c76b}{\hyperlink{classSeatToSpeakerMapper_a9978292542a75eef5da708caf487c76b}{Seat\-To\-Speaker\-Mapper} (Q\-Object $\ast$parent=0)}\label{classSeatToSpeakerMapper_a9978292542a75eef5da708caf487c76b}
+
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classSeatToSpeakerMapper}{Seat\-To\-Speaker\-Mapper} with a given parent. \end{DoxyCompactList}\item 
+void \hyperlink{classSeatToSpeakerMapper_afecf8db446d9e0adfe5a5d14bf28e232}{add\-Mapping} (\hyperlink{classDebate}{Debate} $\ast$debate, \hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4}{Debate\-::\-Role\-Group} group, int seat\-Index, \hyperlink{classSpeakerModel}{Speaker\-Model} $\ast$speaker)
+\begin{DoxyCompactList}\small\item\em Maps a speaker to a specific seat in a debate. \end{DoxyCompactList}\item 
+\hyperlink{classTableNames}{Table\-Names} $\ast$ \hyperlink{classSeatToSpeakerMapper_a4664111c6684c4943173594ff631261a}{get\-Names\-For\-Table} (\hyperlink{classDebate}{Debate} $\ast$debate, \hyperlink{classDebate_ae9871a36a2f3de7a7da8922d70fbece4}{Debate\-::\-Role\-Group} group)
+\begin{DoxyCompactList}\small\item\em Returns a {\ttfamily \hyperlink{classTableNames}{Table\-Names}} object representing the speakers at some table. \end{DoxyCompactList}\item 
+\hypertarget{classSeatToSpeakerMapper_a900eeb6a8050ad64aa0ae1eea69bcc97}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E \hyperlink{classTableNames}{Table\-Names} $\ast$ {\bfseries get\-Names\-For\-Table} (\hyperlink{classDebate}{Debate} $\ast$debate, int group)}\label{classSeatToSpeakerMapper_a900eeb6a8050ad64aa0ae1eea69bcc97}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the results of a matching process. 
+
+{\ttfamily \hyperlink{classSeatToSpeakerMapper}{Seat\-To\-Speaker\-Mapper}} describes a mapping from different places in a debate to speakers that were mapped to these places. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSeatToSpeakerMapper_afecf8db446d9e0adfe5a5d14bf28e232}{\index{Seat\-To\-Speaker\-Mapper@{Seat\-To\-Speaker\-Mapper}!add\-Mapping@{add\-Mapping}}
+\index{add\-Mapping@{add\-Mapping}!SeatToSpeakerMapper@{Seat\-To\-Speaker\-Mapper}}
+\subsubsection[{add\-Mapping}]{\setlength{\rightskip}{0pt plus 5cm}void Seat\-To\-Speaker\-Mapper\-::add\-Mapping (
+\begin{DoxyParamCaption}
+\item[{{\bf Debate} $\ast$}]{debate, }
+\item[{{\bf Debate\-::\-Role\-Group}}]{group, }
+\item[{int}]{seat\-Index, }
+\item[{{\bf Speaker\-Model} $\ast$}]{speaker}
+\end{DoxyParamCaption}
+)}}\label{classSeatToSpeakerMapper_afecf8db446d9e0adfe5a5d14bf28e232}
+
+
+Maps a speaker to a specific seat in a debate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em debate} & the debate in which the speaker is seated \\
+\hline
+{\em group} & the role to which the speaker was mapped \\
+\hline
+{\em seat\-Index} & the speaker's position at his table \\
+\hline
+{\em speaker} & a speaker that is mapped to a given seat \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSeatToSpeakerMapper_a4664111c6684c4943173594ff631261a}{\index{Seat\-To\-Speaker\-Mapper@{Seat\-To\-Speaker\-Mapper}!get\-Names\-For\-Table@{get\-Names\-For\-Table}}
+\index{get\-Names\-For\-Table@{get\-Names\-For\-Table}!SeatToSpeakerMapper@{Seat\-To\-Speaker\-Mapper}}
+\subsubsection[{get\-Names\-For\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Table\-Names} $\ast$ Seat\-To\-Speaker\-Mapper\-::get\-Names\-For\-Table (
+\begin{DoxyParamCaption}
+\item[{{\bf Debate} $\ast$}]{debate, }
+\item[{{\bf Debate\-::\-Role\-Group}}]{group}
+\end{DoxyParamCaption}
+)}}\label{classSeatToSpeakerMapper_a4664111c6684c4943173594ff631261a}
+
+
+Returns a {\ttfamily \hyperlink{classTableNames}{Table\-Names}} object representing the speakers at some table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em debate} & the debate where the table is placed \\
+\hline
+{\em group} & the role group to which the table belongs to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A {\ttfamily \hyperlink{classTableNames}{Table\-Names}} object representing a table. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/src/seattospeakermapper.\-h\item 
+/home/stoef/qt/projects/ddt/ddt/src/seattospeakermapper.\-cpp\end{DoxyCompactItemize}

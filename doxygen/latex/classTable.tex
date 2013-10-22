@@ -1,0 +1,91 @@
+\hypertarget{classTable}{\section{Table Class Reference}
+\label{classTable}\index{Table@{Table}}
+}
+
+
+Displays a debate's table and all enabled team seats.  
+
+
+Inheritance diagram for Table\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTable}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classTable_a6d82e2f7c1b669222fd22ad42f5b92c8}{increment} ()
+\item 
+void \hyperlink{classTable_ab6d6f8837a696567a11b509357529954}{decrement} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTableNames}{Table\-Names} \hyperlink{classTable_acdcaaceb37a19b80750e2b5e1c75cc63}{names}
+\item 
+\hypertarget{classTable_ab401fbfc271b2efc72679916bd055bc6}{int \hyperlink{classTable_ab401fbfc271b2efc72679916bd055bc6}{seat\-Count}}\label{classTable_ab401fbfc271b2efc72679916bd055bc6}
+
+\begin{DoxyCompactList}\small\item\em Holds how many seats are currently being displayed. \end{DoxyCompactList}\item 
+\hypertarget{classTable_a3c3a525011e324c966b3753eed579d78}{bool \hyperlink{classTable_a3c3a525011e324c966b3753eed579d78}{editable}}\label{classTable_a3c3a525011e324c966b3753eed579d78}
+
+\begin{DoxyCompactList}\small\item\em Specifies if the seat count can be edited. \end{DoxyCompactList}\item 
+alias \hyperlink{classTable_a99ba041de21998ee2f001613334e2b73}{table\-Text}
+\item 
+int \hyperlink{classTable_adb0d1c7f4d3581f19f370429d6b88241}{preferred\-Seat\-Count}
+\item 
+\hypertarget{classTable_ab0953083ef1c8e632e10f0828c971b24}{int \hyperlink{classTable_ab0953083ef1c8e632e10f0828c971b24}{max\-Seat\-Count}}\label{classTable_ab0953083ef1c8e632e10f0828c971b24}
+
+\begin{DoxyCompactList}\small\item\em Specifies how many seats the table can hold at most. \end{DoxyCompactList}\item 
+\hypertarget{classTable_a4c7d9044fbec7afa25a9f1be38a44a1f}{int \hyperlink{classTable_a4c7d9044fbec7afa25a9f1be38a44a1f}{\-\_\-\-\_\-seat\-Diameter}}\label{classTable_a4c7d9044fbec7afa25a9f1be38a44a1f}
+
+\begin{DoxyCompactList}\small\item\em Internal. \end{DoxyCompactList}\item 
+alias \hyperlink{classTable_a0fd0e5c3c8de91f59a26c3e6ec0aa149}{table\-Rotation}
+\item 
+alias \hyperlink{classTable_acc1414efc33cc8a93d1c36ee2b81ef88}{rotation\-Origin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Displays a debate's table and all enabled team seats. 
+
+A table in a debate specifies how many seats are reserved for a specific team (e.\-g. how many judicators or speakers of the government take part in a debate). Furthermore, the number of seats can be edited. The individual seats may be labeled with an arbitrary string, usually the speaker's name. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTable_ab6d6f8837a696567a11b509357529954}{\index{Table@{Table}!decrement@{decrement}}
+\index{decrement@{decrement}!Table@{Table}}
+\subsubsection[{decrement}]{\setlength{\rightskip}{0pt plus 5cm}void Table\-::decrement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{classTable_ab6d6f8837a696567a11b509357529954}
+Called whenever the user indicates that he or she wants to remove a seat from the table. \hypertarget{classTable_a6d82e2f7c1b669222fd22ad42f5b92c8}{\index{Table@{Table}!increment@{increment}}
+\index{increment@{increment}!Table@{Table}}
+\subsubsection[{increment}]{\setlength{\rightskip}{0pt plus 5cm}void Table\-::increment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{classTable_a6d82e2f7c1b669222fd22ad42f5b92c8}
+Called whenever the user indicates that he or she wants to add a new seat to the table. 
+
+\subsection{Property Documentation}
+\hypertarget{classTable_acdcaaceb37a19b80750e2b5e1c75cc63}{\index{Table@{Table}!names@{names}}
+\index{names@{names}!Table@{Table}}
+\subsubsection[{names}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Table\-Names} Table\-::names}}\label{classTable_acdcaaceb37a19b80750e2b5e1c75cc63}
+This property is either {\ttfamily null} or maps an arbitrary label to each seat. This label is displayed at each seat. \hypertarget{classTable_adb0d1c7f4d3581f19f370429d6b88241}{\index{Table@{Table}!preferred\-Seat\-Count@{preferred\-Seat\-Count}}
+\index{preferred\-Seat\-Count@{preferred\-Seat\-Count}!Table@{Table}}
+\subsubsection[{preferred\-Seat\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Table\-::preferred\-Seat\-Count}}\label{classTable_adb0d1c7f4d3581f19f370429d6b88241}
+Holds how many seats should be set in a perfectly set debate. This will influence the displayed length of the table. \hypertarget{classTable_acc1414efc33cc8a93d1c36ee2b81ef88}{\index{Table@{Table}!rotation\-Origin@{rotation\-Origin}}
+\index{rotation\-Origin@{rotation\-Origin}!Table@{Table}}
+\subsubsection[{rotation\-Origin}]{\setlength{\rightskip}{0pt plus 5cm}alias Table\-::rotation\-Origin}}\label{classTable_acc1414efc33cc8a93d1c36ee2b81ef88}
+The table's rotation origin. Use this instead of {\ttfamily Item.\-transform\-Origin} to achieve a better useable and readable rotation. \hypertarget{classTable_a0fd0e5c3c8de91f59a26c3e6ec0aa149}{\index{Table@{Table}!table\-Rotation@{table\-Rotation}}
+\index{table\-Rotation@{table\-Rotation}!Table@{Table}}
+\subsubsection[{table\-Rotation}]{\setlength{\rightskip}{0pt plus 5cm}alias Table\-::table\-Rotation}}\label{classTable_a0fd0e5c3c8de91f59a26c3e6ec0aa149}
+The table's rotation. Use this instead of {\ttfamily Item.\-rotation} to achieve a better useable and readable rotation. \hypertarget{classTable_a99ba041de21998ee2f001613334e2b73}{\index{Table@{Table}!table\-Text@{table\-Text}}
+\index{table\-Text@{table\-Text}!Table@{Table}}
+\subsubsection[{table\-Text}]{\setlength{\rightskip}{0pt plus 5cm}alias Table\-::table\-Text}}\label{classTable_a99ba041de21998ee2f001613334e2b73}
+Holds a text that is displayed within the table. This can be used to display which team is seated at this table. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/qml/ddt/Table.\-qml\end{DoxyCompactItemize}

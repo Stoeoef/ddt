@@ -1,0 +1,74 @@
+\hypertarget{classTeam}{\section{Team Class Reference}
+\label{classTeam}\index{Team@{Team}}
+}
+
+
+Represents a team in a debate.  
+
+
+
+
+{\ttfamily \#include $<$team.\-h$>$}
+
+Inheritance diagram for Team\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTeam}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTeam_a29e138b413efaefa54d7e0c36a397ace}{void \hyperlink{classTeam_a29e138b413efaefa54d7e0c36a397ace}{speakers\-Changed} ()}\label{classTeam_a29e138b413efaefa54d7e0c36a397ace}
+
+\begin{DoxyCompactList}\small\item\em Emitted when a speaker was added or removed. \end{DoxyCompactList}\item 
+\hypertarget{classTeam_aefee2bc5f2ca783dfe4ab63a4926128d}{void {\bfseries team\-Name\-Changed} ()}\label{classTeam_aefee2bc5f2ca783dfe4ab63a4926128d}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTeam_afac346a2380d0c8d44e036f3546724fd}{\hyperlink{classTeam_afac346a2380d0c8d44e036f3546724fd}{Team} (Q\-Object $\ast$parent=0)}\label{classTeam_afac346a2380d0c8d44e036f3546724fd}
+
+\begin{DoxyCompactList}\small\item\em Creates a new team with no speakers. \end{DoxyCompactList}\item 
+\hypertarget{classTeam_a5580d0af7691668b06f8b12e36f256ae}{Q\-String {\bfseries team\-Name} ()}\label{classTeam_a5580d0af7691668b06f8b12e36f256ae}
+
+\item 
+\hypertarget{classTeam_a1ea161f9bcc465d45a8ca2603590739e}{void {\bfseries set\-Team\-Name} (Q\-String team\-Name)}\label{classTeam_a1ea161f9bcc465d45a8ca2603590739e}
+
+\item 
+\hypertarget{classTeam_a119572f6c2b161793e6e0142eaaa6662}{void \hyperlink{classTeam_a119572f6c2b161793e6e0142eaaa6662}{add\-Speaker} (\hyperlink{classSpeakerModel}{Speaker\-Model} $\ast$speaker)}\label{classTeam_a119572f6c2b161793e6e0142eaaa6662}
+
+\begin{DoxyCompactList}\small\item\em Adds a speaker to this team. \end{DoxyCompactList}\item 
+\hypertarget{classTeam_a4498bf1abc95c7ac84317e3c0ab1f5ac}{bool \hyperlink{classTeam_a4498bf1abc95c7ac84317e3c0ab1f5ac}{contains\-Speaker} (\hyperlink{classSpeakerModel}{Speaker\-Model} $\ast$speaker)}\label{classTeam_a4498bf1abc95c7ac84317e3c0ab1f5ac}
+
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily true} if a speaker is contained in a specific team. \end{DoxyCompactList}\item 
+\hypertarget{classTeam_a59ac03f8a3f9448b20bfd16c2ad64f04}{const Q\-List$<$ \hyperlink{classSpeakerModel}{Speaker\-Model} $\ast$ $>$ $\ast$ \hyperlink{classTeam_a59ac03f8a3f9448b20bfd16c2ad64f04}{get\-Speakers} ()}\label{classTeam_a59ac03f8a3f9448b20bfd16c2ad64f04}
+
+\begin{DoxyCompactList}\small\item\em Returns all speakers of this team. \end{DoxyCompactList}\item 
+\hypertarget{classTeam_aa64df580e27d1e27b3ced935fa9659f9}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E \hyperlink{classSpeakerModel}{Speaker\-Model} $\ast$ \hyperlink{classTeam_aa64df580e27d1e27b3ced935fa9659f9}{get\-Speaker} (int index)}\label{classTeam_aa64df580e27d1e27b3ced935fa9659f9}
+
+\begin{DoxyCompactList}\small\item\em Returns the speaker with a given index. \end{DoxyCompactList}\item 
+\hypertarget{classTeam_a88ff24cc77f3c1695dbbf26c6c51012c}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E int \hyperlink{classTeam_a88ff24cc77f3c1695dbbf26c6c51012c}{speaker\-Count} ()}\label{classTeam_a88ff24cc77f3c1695dbbf26c6c51012c}
+
+\begin{DoxyCompactList}\small\item\em Returns the number of speakers in this team. \end{DoxyCompactList}\item 
+\hypertarget{classTeam_abdd95ad8dae4c5fa9b2bfdf199c1fa2f}{Q\-\_\-\-I\-N\-V\-O\-K\-A\-B\-L\-E void \hyperlink{classTeam_abdd95ad8dae4c5fa9b2bfdf199c1fa2f}{remove\-Speaker} (int index)}\label{classTeam_abdd95ad8dae4c5fa9b2bfdf199c1fa2f}
+
+\begin{DoxyCompactList}\small\item\em Removes the speaker with a given index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTeam_a9c0ae7e7f136221e0557aeec458b3a66}{Q\-String {\bfseries team\-Name}}\label{classTeam_a9c0ae7e7f136221e0557aeec458b3a66}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a team in a debate. 
+
+A team consists of several speakers which will be matched to the same role. Deleting a speaker will automatically remove him from the team. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/src/team.\-h\item 
+/home/stoef/qt/projects/ddt/ddt/src/team.\-cpp\end{DoxyCompactItemize}

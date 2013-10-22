@@ -1,0 +1,147 @@
+\hypertarget{classMatchingSolver}{\section{Matching\-Solver Class Reference}
+\label{classMatchingSolver}\index{Matching\-Solver@{Matching\-Solver}}
+}
+
+
+Solves the main D\-D\-T matching problem.  
+
+
+
+
+{\ttfamily \#include $<$matchingsolver.\-h$>$}
+
+Inheritance diagram for Matching\-Solver\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMatchingSolver}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMatchingSolver_afbd9f5c5ad885d89a319f751df5beaad}{get\-Random\-Solution} ()
+\item 
+void \hyperlink{classMatchingSolver_ac69e6c3f40d3df7c55e5ff7d307acacc}{interrupt} ()
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMatchingSolver_a4636879fe14fc8d2b5e41dd6be4a9eed}{finished} (\hyperlink{classSeatToSpeakerMapper}{Seat\-To\-Speaker\-Mapper} $\ast$mapper)
+\begin{DoxyCompactList}\small\item\em Emitted after a solution was found. \end{DoxyCompactList}\item 
+\hypertarget{classMatchingSolver_a8d685c64a6f848b0a3d8f42f5fe9a216}{void \hyperlink{classMatchingSolver_a8d685c64a6f848b0a3d8f42f5fe9a216}{interrupted} ()}\label{classMatchingSolver_a8d685c64a6f848b0a3d8f42f5fe9a216}
+
+\begin{DoxyCompactList}\small\item\em Emitted after a successfull interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{classMatchingSolver_aaf7b8cbfb8ee9a55ef5a10bc20ef5e7a}{no\-Solution\-Found} (Q\-String\-List errors)
+\begin{DoxyCompactList}\small\item\em Emitted if no feasible solution exists. \end{DoxyCompactList}\item 
+void \hyperlink{classMatchingSolver_af02dc51033a7a381855a1bd6fd77a39c}{done} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatchingSolver_a0b9694c01fe96c7586f218dd11f7e9bc}{Matching\-Solver} (const Q\-List$<$ \hyperlink{classDebate}{Debate} $\ast$ $>$ $\ast$debates, const Q\-List$<$ \hyperlink{classSpeakerModel}{Speaker\-Model} $\ast$ $>$ $\ast$speakers, const Q\-List$<$ \hyperlink{classTeam}{Team} $\ast$ $>$ $\ast$teams, Q\-Object $\ast$parent)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classMatchingSolver}{Matching\-Solver} creates a new matching solver with given problem data. \end{DoxyCompactList}\item 
+\hypertarget{classMatchingSolver_ad58841ead4b492150652e807e7ac4181}{bool \hyperlink{classMatchingSolver_ad58841ead4b492150652e807e7ac4181}{is\-Interrupted} ()}\label{classMatchingSolver_ad58841ead4b492150652e807e7ac4181}
+
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily true} if the solver was interrupted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Solves the main D\-D\-T matching problem. 
+
+D\-D\-T matches speakers to speaker roles in a debate. Only feasible matchings will be calculated, otherwise the solver signals that no solution exists. A matching is only feasible if
+\begin{DoxyItemize}
+\item No speaker is mapped to a role that is not allowed for him (e.\-g. by setting \hyperlink{classSpeakerModel_ae7ddef47cf54a9ace7c2399c7a18049d}{Speaker\-Model\-::opd\-Ffr} to false
+\item Two beginner must not be placed in the same team
+\item Teams must be placed in the same team The computational complexity of the problem hight due to the last two feasability criteria. This class uses google's constraint programming solver  or-\/tools to calculate optimal solutions.\par
+The solver is not designed to calculate all solutions (the number of solutions grows exponentionally with the number of speakers) but guarantees highly randomised single solutions by shuffling the input data. New random solutions can be obtained without recreating the solver. \par
+The class is designed to operate in its own thread, communication is done by Qt's signal/slot mechanism. 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMatchingSolver_a0b9694c01fe96c7586f218dd11f7e9bc}{\index{Matching\-Solver@{Matching\-Solver}!Matching\-Solver@{Matching\-Solver}}
+\index{Matching\-Solver@{Matching\-Solver}!MatchingSolver@{Matching\-Solver}}
+\subsubsection[{Matching\-Solver}]{\setlength{\rightskip}{0pt plus 5cm}Matching\-Solver\-::\-Matching\-Solver (
+\begin{DoxyParamCaption}
+\item[{const Q\-List$<$ {\bf Debate} $\ast$ $>$ $\ast$}]{debates, }
+\item[{const Q\-List$<$ {\bf Speaker\-Model} $\ast$ $>$ $\ast$}]{speakers, }
+\item[{const Q\-List$<$ {\bf Team} $\ast$ $>$ $\ast$}]{teams, }
+\item[{Q\-Object $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}}\label{classMatchingSolver_a0b9694c01fe96c7586f218dd11f7e9bc}
+
+
+\hyperlink{classMatchingSolver}{Matching\-Solver} creates a new matching solver with given problem data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em debates} & The debates considered for this matching. \\
+\hline
+{\em speakers} & The speakers considered for this matching. \\
+\hline
+{\em teams} & The teams considered for this matching. \\
+\hline
+{\em parent} & The solver's parent object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMatchingSolver_af02dc51033a7a381855a1bd6fd77a39c}{\index{Matching\-Solver@{Matching\-Solver}!done@{done}}
+\index{done@{done}!MatchingSolver@{Matching\-Solver}}
+\subsubsection[{done}]{\setlength{\rightskip}{0pt plus 5cm}void Matching\-Solver\-::done (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{classMatchingSolver_af02dc51033a7a381855a1bd6fd77a39c}
+Called after either \hyperlink{classMatchingSolver_a4636879fe14fc8d2b5e41dd6be4a9eed}{finished}, \hyperlink{classMatchingSolver_a8d685c64a6f848b0a3d8f42f5fe9a216}{interrupted} or \hyperlink{classMatchingSolver_aaf7b8cbfb8ee9a55ef5a10bc20ef5e7a}{no\-Solution\-Found} have been called. The solver becomes inactive afterwards. \hypertarget{classMatchingSolver_a4636879fe14fc8d2b5e41dd6be4a9eed}{\index{Matching\-Solver@{Matching\-Solver}!finished@{finished}}
+\index{finished@{finished}!MatchingSolver@{Matching\-Solver}}
+\subsubsection[{finished}]{\setlength{\rightskip}{0pt plus 5cm}void Matching\-Solver\-::finished (
+\begin{DoxyParamCaption}
+\item[{{\bf Seat\-To\-Speaker\-Mapper} $\ast$}]{mapper}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{classMatchingSolver_a4636879fe14fc8d2b5e41dd6be4a9eed}
+
+
+Emitted after a solution was found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapper} & a feasible, freshly calculated solution. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMatchingSolver_afbd9f5c5ad885d89a319f751df5beaad}{\index{Matching\-Solver@{Matching\-Solver}!get\-Random\-Solution@{get\-Random\-Solution}}
+\index{get\-Random\-Solution@{get\-Random\-Solution}!MatchingSolver@{Matching\-Solver}}
+\subsubsection[{get\-Random\-Solution}]{\setlength{\rightskip}{0pt plus 5cm}void Matching\-Solver\-::get\-Random\-Solution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classMatchingSolver_afbd9f5c5ad885d89a319f751df5beaad}
+Starts the calculation of a new random solution. Once the calculation is finished, \hyperlink{classMatchingSolver_aaf7b8cbfb8ee9a55ef5a10bc20ef5e7a}{no\-Solution\-Found} or \hyperlink{classMatchingSolver_a4636879fe14fc8d2b5e41dd6be4a9eed}{finished} is signaled. \hypertarget{classMatchingSolver_ac69e6c3f40d3df7c55e5ff7d307acacc}{\index{Matching\-Solver@{Matching\-Solver}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!MatchingSolver@{Matching\-Solver}}
+\subsubsection[{interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Matching\-Solver\-::interrupt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classMatchingSolver_ac69e6c3f40d3df7c55e5ff7d307acacc}
+Asks the solver to interrupt the current solving process. The call has no effect if no calculation is running. After a succesfull interrupt, \hyperlink{classMatchingSolver_a8d685c64a6f848b0a3d8f42f5fe9a216}{interrupted} is signaled. \hypertarget{classMatchingSolver_aaf7b8cbfb8ee9a55ef5a10bc20ef5e7a}{\index{Matching\-Solver@{Matching\-Solver}!no\-Solution\-Found@{no\-Solution\-Found}}
+\index{no\-Solution\-Found@{no\-Solution\-Found}!MatchingSolver@{Matching\-Solver}}
+\subsubsection[{no\-Solution\-Found}]{\setlength{\rightskip}{0pt plus 5cm}void Matching\-Solver\-::no\-Solution\-Found (
+\begin{DoxyParamCaption}
+\item[{Q\-String\-List}]{errors}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{classMatchingSolver_aaf7b8cbfb8ee9a55ef5a10bc20ef5e7a}
+
+
+Emitted if no feasible solution exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em errors} & a (potentially empty) list of reasons why no solution could be found. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/src/matchingsolver.\-h\item 
+/home/stoef/qt/projects/ddt/ddt/src/matchingsolver.\-cpp\end{DoxyCompactItemize}

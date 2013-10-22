@@ -1,0 +1,76 @@
+\hypertarget{classAutoCompleteTextField}{\section{Auto\-Complete\-Text\-Field Class Reference}
+\label{classAutoCompleteTextField}\index{Auto\-Complete\-Text\-Field@{Auto\-Complete\-Text\-Field}}
+}
+
+
+A text field with autocompletion.  
+
+
+Inheritance diagram for Auto\-Complete\-Text\-Field\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAutoCompleteTextField}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAutoCompleteTextField_ac25877666f204e1262f089964c433868}{return\-Pressed} (var event)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAutoCompleteTextField_a5b1d8d7c0aec58bcaa9f556493d8dbda}{void \hyperlink{classAutoCompleteTextField_a5b1d8d7c0aec58bcaa9f556493d8dbda}{accept\-Current\-Completion} ()}\label{classAutoCompleteTextField_a5b1d8d7c0aec58bcaa9f556493d8dbda}
+
+\begin{DoxyCompactList}\small\item\em Accepts the currently selected auto completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAutoCompleteTextField_a633ed88c3f0b7217561c4dbd0c4ea021}{\hyperlink{classAutoCompleteModel}{Auto\-Complete\-Model} \hyperlink{classAutoCompleteTextField_a633ed88c3f0b7217561c4dbd0c4ea021}{complete\-Model}}\label{classAutoCompleteTextField_a633ed88c3f0b7217561c4dbd0c4ea021}
+
+\begin{DoxyCompactList}\small\item\em Used to obtain possible completions. \end{DoxyCompactList}\item 
+\hypertarget{classAutoCompleteTextField_a969420d165123d0897e14887bde2a988}{string \hyperlink{classAutoCompleteTextField_a969420d165123d0897e14887bde2a988}{text}}\label{classAutoCompleteTextField_a969420d165123d0897e14887bde2a988}
+
+\begin{DoxyCompactList}\small\item\em the text field's text \end{DoxyCompactList}\item 
+\hypertarget{classAutoCompleteTextField_ae017eba891574653d44853c70c5f288e}{string \hyperlink{classAutoCompleteTextField_ae017eba891574653d44853c70c5f288e}{alternative\-Text}}\label{classAutoCompleteTextField_ae017eba891574653d44853c70c5f288e}
+
+\begin{DoxyCompactList}\small\item\em shown if text is empty \end{DoxyCompactList}\item 
+\hypertarget{classAutoCompleteTextField_aac0b683369ed7794810c7466149bea9f}{bool \hyperlink{classAutoCompleteTextField_aac0b683369ed7794810c7466149bea9f}{active\-Focus\-On\-Press}}\label{classAutoCompleteTextField_aac0b683369ed7794810c7466149bea9f}
+
+\begin{DoxyCompactList}\small\item\em {\ttfamily true} if focus can be gained by clicking in the text field \end{DoxyCompactList}\item 
+\hypertarget{classAutoCompleteTextField_a4b4a8370abd9f2c421de9e0316807ee8}{alias \hyperlink{classAutoCompleteTextField_a4b4a8370abd9f2c421de9e0316807ee8}{clip}}\label{classAutoCompleteTextField_a4b4a8370abd9f2c421de9e0316807ee8}
+
+\begin{DoxyCompactList}\small\item\em type\-: bool use clipping to prevent long text being rendered outside the component \end{DoxyCompactList}\item 
+bool \hyperlink{classAutoCompleteTextField_a710dfeff1a9fca62d3103dff06e06afb}{prefer\-Alternative\-Text}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A text field with autocompletion. 
+
+Possible entries for autocompletion are shown in a list below the text field. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classAutoCompleteTextField_ac25877666f204e1262f089964c433868}{\index{Auto\-Complete\-Text\-Field@{Auto\-Complete\-Text\-Field}!return\-Pressed@{return\-Pressed}}
+\index{return\-Pressed@{return\-Pressed}!AutoCompleteTextField@{Auto\-Complete\-Text\-Field}}
+\subsubsection[{return\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Auto\-Complete\-Text\-Field\-::return\-Pressed (
+\begin{DoxyParamCaption}
+\item[{var}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{classAutoCompleteTextField_ac25877666f204e1262f089964c433868}
+Emitted when return is pressed while the text field has focus. 
+\begin{DoxyParams}{Parameters}
+{\em type} & Key\-Event the key event \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{classAutoCompleteTextField_a710dfeff1a9fca62d3103dff06e06afb}{\index{Auto\-Complete\-Text\-Field@{Auto\-Complete\-Text\-Field}!prefer\-Alternative\-Text@{prefer\-Alternative\-Text}}
+\index{prefer\-Alternative\-Text@{prefer\-Alternative\-Text}!AutoCompleteTextField@{Auto\-Complete\-Text\-Field}}
+\subsubsection[{prefer\-Alternative\-Text}]{\setlength{\rightskip}{0pt plus 5cm}bool Auto\-Complete\-Text\-Field\-::prefer\-Alternative\-Text}}\label{classAutoCompleteTextField_a710dfeff1a9fca62d3103dff06e06afb}
+true if the text field is hidden by default. The alternative text is shown instead. Gaining focus will show the text field. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/stoef/qt/projects/ddt/ddt/qml/ddt/Auto\-Complete\-Text\-Field.\-qml\end{DoxyCompactItemize}
