@@ -2,6 +2,10 @@ ddt.pro.user
 moc
 obj
 Makefile
-./ddt
-./ddtexe
-or-tools-read-only/
+Makefile.Debug
+Makefile.Release
+dtexe
+deps/**/*
+debug
+release
+options.xml
