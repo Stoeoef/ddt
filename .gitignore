@@ -1,6 +1,7 @@
-ddt.pro.user
+./ddt.pro.user
 moc
 obj
 Makefile
-ddt
-ddtexe
+./ddt
+./ddtexe
+or-tools-read-only/
