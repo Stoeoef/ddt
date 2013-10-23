@@ -51,11 +51,6 @@ win32: LIBS += \
     -L/lib/x86_64-linux-gnu/ -lzlib \
     -LC:/Windows/SysWOW64&/ -lws2_32 \
 
-
-lupdate_only {
-    SOURCES = qml/ddt/*.qml
-}
-
 unix: TARGET = ddtexe
 win32: TARGET = ddt
 
@@ -140,6 +135,10 @@ TRANSLATIONS = \
     languages/en.ts \
     languages/de.ts
 
+lupdate_only {
+    SOURCES = qml/ddt/*.qml
+}
+
 ######## Misc
 QMAKE_CXXFLAGS += -std=c++11
 
@@ -148,6 +147,7 @@ OTHER_FILES += \
     ddt.qmlproject \
     README.md \
     LICENSE \
+
 
 OBJECTS_DIR = ./.obj
 
