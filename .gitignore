@@ -4,7 +4,7 @@ obj
 Makefile
 Makefile.Debug
 Makefile.Release
-dtexe
+ddtexe
 deps/**/*
 debug
 release
