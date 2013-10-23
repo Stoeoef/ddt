@@ -1,13 +1,5 @@
 QT += widgets quick
 
-# Additional import path used to resolve QML modules in Creator's code model
-QML_IMPORT_PATH =
-
-# If your application uses the Qt Mobility libraries, uncomment the following
-# lines and add the respective components to the MOBILITY variable.
-# CONFIG += mobility
-# MOBILITY +=
-
 SOURCES += src/main.cpp \
     src/speakermodel.cpp \
     src/mainmodel.cpp \
@@ -33,15 +25,39 @@ copyother.path = $$installPath
 copyother.files += misc/options.xml
 copyother.files += misc/LICENSE
 
+copyQtQuick.path = $$installPath/qml/
+copyQtQuick.files += $$(QTDIR)/qml/QtQuick.2
+
+copyQmlPlugins.path = $$installPath/qml/QtQuick
+copyQmlPlugins.files += $$(QTDIR)/qml/QtQuick/Controls \
+                        $$(QTDIR)/qml/QtQuick/Layouts \
+                        $$(QTDIR)/qml/QtQuick/Window.2 \
+
 win32: copyother.files += misc/windeploy/*
 unix: copyother.files += misc/unixdeploy/*
+
+copyPlatform.path = $$installPath/plugins/platforms
+copyImageFormats.path = $$installPath/plugins/imageformats
 
 unix: {
     qtLibPath = $$(QTDIR)/lib
     copyqtlibs.path = $$installPath/lib
-    copyqtlibs.files+=$$qtLibPath/libQt5Core.so.5.1.1
-    copyqtlibs.files+=$$qtLibPath/libQt5Gui.so.5.1.1
-    copyqtlibs.files+=$$qtLibPath/libQt5Widgets.so.5.1.1
+    copyqtlibs.files+=  $$qtLibPath/libicudata.so* \
+                        $$qtLibPath/libicui18n.so* \
+                        $$qtLibPath/libicuuc.so* \
+                        $$qtLibPath/libQt5Core.so.5* \
+                        $$qtLibPath/libQt5Gui.so.5* \
+                        $$qtLibPath/libQt5Widgets.so.5* \
+                        $$qtLibPath/libtQt5Network.so.5* \
+                        $$qtLibPath/libQt5Qml.so.5* \
+                        $$qtLibPath/libQt5Quick.so.5* \
+                        $$qtLibPath/libQt5V8.so.5* \
+                        $$qtLibPath/libQt5Widgets.so.5* \
+                        $$qtLibPath/libQt5Svg.so.5* \
+                        $$qtLibPath/libQt5DBus.so.5*
+
+    copyPlatform.files += $$(QTDIR)/plugins/platforms/libqxcb.so
+    copyImageFormats.files += $$(QTDIR)/plugins/imageformats/libqsvg.so
 }
 
 win32: {
@@ -63,12 +79,6 @@ win32: {
                         $$qtLibPath/Qt5Svg.dll \
 }
 
-unix: {
-    copyorlibs.path=$$copyqtlibs.path
-    copyorlibs.files+=$$PWD/deps/or-tools-read-only/lib/*
-    copyorlibs.files+=$$PWD/deps/or-tools-read-only/dependencies/install/lib/*
-}
-
 copylang.path = $$installPath/languages
 copylang.files = languages/*.ts
 
@@ -78,12 +88,11 @@ copyqml.files = qml
 copyexecutable.path = $$installPath
 
 unix: copyexecutable.files = $$TARGET
+unix: copyexecutable.commands += chmod +x $$copyexecutable.path/ddt.sh
+
 win32: copyexecutable.files = $$PWD/release/$$sprintf($$TARGET%1, .exe)
 
-INSTALLS += copymisc copyqtlibs copyqml copyexecutable copylang
-unix: INSTALLS += copyorlibs
-
-
+INSTALLS += copyother copyqtlibs copyQmlPlugins copyQtQuick copyqml copyexecutable copylang copyPlatform copyImageFormats
 
 HEADERS += \
     src/speakermodel.h \
