@@ -1,5 +1,6 @@
 QT += widgets quick
 
+######## Source and Header files
 SOURCES += src/main.cpp \
     src/speakermodel.cpp \
     src/mainmodel.cpp \
@@ -16,9 +17,50 @@ SOURCES += src/main.cpp \
     src/ddtconfiguration.cpp \
     src/mixedvaluespeakermodel.cpp \
 
+HEADERS += \
+    src/speakermodel.h \
+    src/qlistqmlwrapper.h \
+    src/opdebate.h \
+    src/bpsdebate.h \
+    src/debate.h \
+    src/seattospeakermapper.h \
+    src/tablenames.h \
+    src/team.h \
+    src/prototypeqlistqmlwrapper.h \
+    src/mainmodel.h \
+    src/matchingsolver.h \
+    src/autocompletemodel.h \
+    src/ddtconfiguration.h \
+    src/mixedvaluespeakermodel.h \
+
+######## External libraries
+INCLUDEPATH += \
+    $$PWD/deps/or-tools-read-only/src \
+    $$PWD/deps/or-tools-read-only/dependencies/install/include \
+
+unix: LIBS += \
+    -L$$PWD/deps/or-tools-read-only/lib/ -lconstraint_solver -lbase -lutil -llinear_solver\
+    -L$$PWD/deps/or-tools-read-only/dependencies/install/lib/ -lprotobuf -lCbc -lCbcSolver\
+          -lgflags -lClp -lCgl -lCoinUtils -lOsi -lOsiClp\
+    -L/lib/x86_64-linux-gnu/ -lz \
+
+win32: LIBS += \
+    -L$$PWD/deps/or-tools-read-only/lib/ -lconstraint_solver -lbase -lutil -llinear_solver\
+    -L$$PWD/deps/or-tools-read-only/dependencies/install/lib/ -llibprotobuf -llibgflags \
+    -L$$PWD/deps/or-tools-read-only/dependencies/install/lib/coin -llibCbc -llibCbcSolver -llibCgl -llibClp -llibCoinUtils -llibOsi -llibOsiClp \
+    -L/lib/x86_64-linux-gnu/ -lzlib \
+    -LC:/Windows/SysWOW64&/ -lws2_32 \
+
+
+lupdate_only {
+    SOURCES = qml/ddt/*.qml
+}
+
 unix: TARGET = ddtexe
 win32: TARGET = ddt
 
+######## Install target
+# platform independent definitions
 installPath = $$PWD/../ddt_install
 
 copyother.path = $$installPath
@@ -33,13 +75,20 @@ copyQmlPlugins.files += $$(QTDIR)/qml/QtQuick/Controls \
                         $$(QTDIR)/qml/QtQuick/Layouts \
                         $$(QTDIR)/qml/QtQuick/Window.2 \
 
-win32: copyother.files += misc/windeploy/*
-unix: copyother.files += misc/unixdeploy/*
-
 copyPlatform.path = $$installPath/plugins/platforms
 copyImageFormats.path = $$installPath/plugins/imageformats
 
+copylang.path = $$installPath/languages
+copylang.files = languages/*.ts
+
+copyqml.path = $$installPath
+copyqml.files = qml
+
+copyexecutable.path = $$installPath
+
+# unix install definitions
 unix: {
+    copyother.files += misc/unixdeploy/*
     qtLibPath = $$(QTDIR)/lib
     copyqtlibs.path = $$installPath/lib
     copyqtlibs.files+=  $$qtLibPath/libicudata.so* \
@@ -58,9 +107,13 @@ unix: {
 
     copyPlatform.files += $$(QTDIR)/plugins/platforms/libqxcb.so
     copyImageFormats.files += $$(QTDIR)/plugins/imageformats/libqsvg.so
+    copyexecutable.files = $$TARGET
+    copyexecutable.commands += chmod +x $$copyexecutable.path/ddt.sh
 }
 
+# windows install definitions
 win32: {
+    copyother.files += misc/windeploy/*
     qtLibPath = $$(QTDIR)/bin
     copyqtlibs.path = $$installPath/
     copyqtlibs.files+=  $$qtLibPath/d3dcompiler_46.dll \
@@ -77,47 +130,17 @@ win32: {
                         $$qtLibPath/Qt5V8.dll \
                         $$qtLibPath/Qt5Widgets.dll \
                         $$qtLibPath/Qt5Svg.dll \
+    copyexecutable.files = $$PWD/release/$$sprintf($$TARGET%1, .exe)
 }
-
-copylang.path = $$installPath/languages
-copylang.files = languages/*.ts
-
-copyqml.path = $$installPath
-copyqml.files = qml
-
-copyexecutable.path = $$installPath
-
-unix: copyexecutable.files = $$TARGET
-unix: copyexecutable.commands += chmod +x $$copyexecutable.path/ddt.sh
-
-win32: copyexecutable.files = $$PWD/release/$$sprintf($$TARGET%1, .exe)
 
 INSTALLS += copyother copyqtlibs copyQmlPlugins copyQtQuick copyqml copyexecutable copylang copyPlatform copyImageFormats
 
-HEADERS += \
-    src/speakermodel.h \
-    src/qlistqmlwrapper.h \
-    src/opdebate.h \
-    src/bpsdebate.h \
-    src/debate.h \
-    src/seattospeakermapper.h \
-    src/tablenames.h \
-    src/team.h \
-    src/prototypeqlistqmlwrapper.h \
-    src/mainmodel.h \
-    src/matchingsolver.h \
-    src/autocompletemodel.h \
-    src/ddtconfiguration.h \
-    src/mixedvaluespeakermodel.h \
-
-lupdate_only {
-SOURCES = qml/ddt/*.qml
-}
-
+######## Translations
 TRANSLATIONS = \
     languages/en.ts \
     languages/de.ts
 
+######## Misc
 QMAKE_CXXFLAGS += -std=c++11
 
 OTHER_FILES += \
@@ -126,24 +149,6 @@ OTHER_FILES += \
     README.md \
     LICENSE \
 
-INCLUDEPATH += \
-    $$PWD/deps/or-tools-read-only/src \
-    $$PWD/deps/or-tools-read-only/dependencies/install/include \
+OBJECTS_DIR = ./.obj
 
-OBJECTS_DIR = ./obj
-
-MOC_DIR = ./moc
-
-unix: LIBS += \
-    -L$$PWD/deps/or-tools-read-only/lib/ -lconstraint_solver -lbase -lutil -llinear_solver\
-    -L$$PWD/deps/or-tools-read-only/dependencies/install/lib/ -lprotobuf -lCbc -lCbcSolver\
-          -lgflags -lClp -lCgl -lCoinUtils -lOsi -lOsiClp\
-    -L/lib/x86_64-linux-gnu/ -lz \
-
-win32: LIBS += \
-    -L$$PWD/deps/or-tools-read-only/lib/ -lconstraint_solver -lbase -lutil -llinear_solver\
-    -L$$PWD/deps/or-tools-read-only/dependencies/install/lib/ -llibprotobuf -llibgflags \
-    -L$$PWD/deps/or-tools-read-only/dependencies/install/lib/coin -llibCbc -llibCbcSolver -llibCgl -llibClp -llibCoinUtils -llibOsi -llibOsiClp \
-    -L/lib/x86_64-linux-gnu/ -lzlib \
-    -LC:/Windows/SysWOW64&/ -lws2_32 \
-
+MOC_DIR = ./.moc

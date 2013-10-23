@@ -1,6 +1,6 @@
 ddt.pro.user
-moc
-obj
+.moc
+.obj
 Makefile
 Makefile.Debug
 Makefile.Release
