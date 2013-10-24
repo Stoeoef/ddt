@@ -74,7 +74,7 @@ copyPlatform.path = $$installPath/plugins/platforms
 copyImageFormats.path = $$installPath/plugins/imageformats
 
 copylang.path = $$installPath/languages
-copylang.files = languages/*.ts
+copylang.files = languages/*.qm
 
 copyqml.path = $$installPath
 copyqml.files = qml

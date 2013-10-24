@@ -34,8 +34,8 @@ MainModel::MainModel(QString configFile, QObject *parent) :
 	readNames();
 
 	QTranslator *translator = new QTranslator(this);
-	translator->load(m_config.language(), "languages/");
-	qApp->installTranslator(translator);
+    translator->load(m_config.language(), "languages/");
+    qApp->installTranslator(translator);
 
 	connect(m_debates, SIGNAL(listChanged()), this, SIGNAL(numPlacesChanged()));
 }
