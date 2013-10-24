@@ -1,0 +1,7 @@
+To install DDT on linux, install the following packages with your favourite package manager:
+
+libxcb-glx0 libxcb-dri2-0 libxcb1 libx11-xcb1
+
+Then, run ddt.sh
+
+
