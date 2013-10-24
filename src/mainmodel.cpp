@@ -28,15 +28,6 @@ MainModel::MainModel(QString configFile, QObject *parent) :
 {
 	SpeakerModel speakerProto;
 	m_speakerList = new PrototypeQListQmlWrapper(&speakerProto, this);
-	addSpeaker("Jonas");
-	addSpeaker("Lisa");
-	addSpeaker("Johannes");
-	addSpeaker("Magda");
-	addSpeaker("Hannes");
-	addSpeaker("Stephan");
-	addSpeaker("Christian");
-	addSpeaker("Timo");
-	addSpeaker("Jannis");
 
 	OPDebate debateProto;
 	m_debates = new PrototypeQListQmlWrapper(&debateProto, this);
