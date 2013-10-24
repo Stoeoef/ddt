@@ -68,7 +68,7 @@ copyQtQuick.files += $$(QTDIR)/qml/QtQuick.2
 copyQmlPlugins.path = $$installPath/qml/QtQuick
 copyQmlPlugins.files += $$(QTDIR)/qml/QtQuick/Controls \
                         $$(QTDIR)/qml/QtQuick/Layouts \
-                        $$(QTDIR)/qml/QtQuick/Window.2 \
+                        $$(QTDIR)/qml/QtQuick/Window.2
 
 copyPlatform.path = $$installPath/plugins/platforms
 copyImageFormats.path = $$installPath/plugins/imageformats
@@ -124,7 +124,10 @@ win32: {
                         $$qtLibPath/Qt5Quick.dll \
                         $$qtLibPath/Qt5V8.dll \
                         $$qtLibPath/Qt5Widgets.dll \
-                        $$qtLibPath/Qt5Svg.dll \
+                        $$qtLibPath/Qt5Svg.dll
+
+    copyPlatform.files += $$(QTDIR)/plugins/platforms/qwindows.dll
+    copyImageFormats.files += $$(QTDIR)/plugins/imageformats/qsvg.dll
     copyexecutable.files = $$PWD/release/$$sprintf($$TARGET%1, .exe)
 }
 
